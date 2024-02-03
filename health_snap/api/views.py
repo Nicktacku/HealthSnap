@@ -1,9 +1,11 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from django.http import JsonResponse
+
 from .nfa import NFA
 
-@api_view()
+@api_view(["GET"])
 def home(request):
     return Response("Hello world")
 
@@ -171,4 +173,4 @@ def symptom_checker(request):
     nfa = NFA(states, inputs, transition, initial, final)
     result = nfa.run(request.data["symptoms"])
 
-    return Response(result)
+    return JsonResponse({"result": result})

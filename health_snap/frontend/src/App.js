@@ -1,22 +1,36 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [title, setTitle] = useState("Check Your Symptoms");
+  const [datas, setData] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setTitle("Results");
+
+    const response = await fetch("http://127.0.0.1:8000/symptom/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ symptoms: ["u1", "u2", "cc4"] }),
+    });
+
+    const data = await response.json();
+    console.log(data.result);
+    setData(data.result);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <p>{title}</p>
+      {Object.keys(datas).map((data) => (
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {data}: {datas[data]}%
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      ))}
+      <form onSubmit={handleSubmit}>
+        <button>Press me</button>
+      </form>
     </div>
   );
 }
