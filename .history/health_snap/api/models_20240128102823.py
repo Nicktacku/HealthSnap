@@ -6,11 +6,7 @@ class Information(models.Model):
     birthday = models.DateField()
 
 class Symptom(models.Model):
-    name = models.CharField(max_length=50)
-
-class Sickness(models.Model):
-    symptom_id = models.CharField(max_length=100)
-    name = models.CharField(max_length=50)
+    sickness = models.CharField(max_length=100)
 
 class Feedback(models.Model):
     stars = models.IntegerField(blank=False, null=False)

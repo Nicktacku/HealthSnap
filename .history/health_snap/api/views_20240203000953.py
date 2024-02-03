@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .nfa import NFA
+from .nfa import Nfa
 
 @api_view()
 def home(request):
@@ -169,6 +169,5 @@ def symptom_checker(request):
     final = {"common cold", "influenza", "Acute Bronchitis", "tonsillopharyngitis", "chickenpox"}
 
     nfa = NFA(states, inputs, transition, initial, final)
-    result = nfa.run(request.data["symptoms"])
-
+    result = NFA.run(["u1", "u2", "cc4"])
     return Response(result)
