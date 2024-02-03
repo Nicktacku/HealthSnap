@@ -170,5 +170,4 @@ def symptom_checker(request):
 
     nfa = NFA(states, inputs, transition, initial, final)
     result = nfa.run(request.data["symptoms"])
-
     return Response(result)
