@@ -41,7 +41,7 @@ const HomePage = () => {
       </section>
       {/*!--home section ends*/}
       {/*!--icons section starts*/}
-      <section className="icons-container" id="icons" >
+      <section className="icons-container" id="icons" style={{backgroundColor: "#FFFFFF"}}>
         <div className="icons">
           <FontAwesomeIcon icon={faUserMd} size="5x" className="change-iconColor" />
           <h3>Sympto-Mata</h3>
@@ -103,7 +103,7 @@ const HomePage = () => {
       {/*!--about section ends--*/}
 
       {/*!--services section starts--*/}
-      <section class="services" id="services">
+      <section class="services" id="services" style={{backgroundColor: "#FFFFFF"}}>
         <h1 class="heading">
           {" "}
           our <span>services</span>
@@ -227,7 +227,7 @@ const HomePage = () => {
 
       {/*!--review section starts--*/}
 
-      <section class="review" id="review">
+      <section class="review" id="review" style={{backgroundColor: "#FFFFFF"}}>
         <h1 class="heading">
           {" "}
           CLIENT'S <span>FEEDBACK</span>

@@ -101,7 +101,7 @@ function ConsultationP1() {
             Fever
           </label>
           <label className="font-size-change">
-            <input type="checkbox" id="Headache" value="" onChange={addValue} />
+            <input type="checkbox" id="Headache" value="u5" onChange={addValue} />
             Headache
           </label>
           <label className="font-size-change">
