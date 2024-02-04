@@ -176,8 +176,24 @@ function App() {
 			</div>
 		</div>
 
-	</div>
+		<div class="box">
+			<img src="Images/K.png" alt=""/>
+			<h3>KIA</h3>
+			<span>DOCUMENTATION</span>
+			<div class="share">
+				<a href="https://www.facebook.com/malubagkia">
+				<FontAwesomeIcon icon={faFacebookF}/>
+				</a>
+				<a href="#">
+					<FontAwesomeIcon icon={faTwitter}/>
+				</a>
+				<a href="#">
+					<FontAwesomeIcon icon={faInstagram}/>
+				</a>
+			</div>
+		</div>
 
+	</div>
 </section>
 
 {/*!-- doctors section ends --*/}
