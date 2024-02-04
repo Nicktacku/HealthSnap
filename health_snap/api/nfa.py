@@ -11,8 +11,8 @@ class NFA:
         sicknesses = self.start
         while symptoms != []:
             new_sicknesses = set({})
-            for q in sicknesses:
-                new_sicknesses = new_sicknesses.union(self.transitions[(q,symptoms[0])])
+            for sickness in sicknesses:
+                new_sicknesses = new_sicknesses.union(self.transitions[(sickness,symptoms[0])])
             symptoms = symptoms[1:]
             sicknesses = new_sicknesses
             for sickness in sicknesses:
@@ -34,8 +34,6 @@ class NFA:
                 total = 8
             self.included[key] = int((value/total) * 100)
         return self.included
-
-        
 
 
 states = ["no sickness", "common cold", "influenza", "Acute Bronchitis", "tonsillopharyngitis", "chickenpox"]
