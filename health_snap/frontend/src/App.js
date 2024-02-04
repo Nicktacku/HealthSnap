@@ -33,7 +33,7 @@ function App() {
 			<h3>Hi! I am</h3>
 			<h1>Symptomata</h1>
 			<p >Your Personal Health Companion</p>
-			<p>Elevate your well-being with Symptomata, the medical app that harnesses the power of Non-Deterministic Finite Automata to decode symptoms and pave the way for personalized health solutions.</p>
+			<p>Elevate your well-being with Symptomata! The medical app that harnesses the power of Non-Deterministic Finite Automata to decode symptoms and pave the way for personalized health solutions.</p>
 			<a href="#icons" class="btn"> CONTINUE <FontAwesomeIcon icon={faChevronRight} /></a>
 		</div>
 		
@@ -94,7 +94,7 @@ function App() {
 			<div class="box">
 				<i class="fas fa-user-md"></i>
 				<h3>Consult</h3>
-				<p>There is a consultation feature for you to know the first aid you need to do for you health.</p>
+				<p>This section is a consultation feature for early diagnosis in your health.</p>
 				<a href="consulation.html" class="btn"> Go to consult <FontAwesomeIcon icon={faChevronRight}/> </a>
 			</div>
 		</div>
