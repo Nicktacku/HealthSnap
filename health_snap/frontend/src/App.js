@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "./App.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight, faUserMd, faHeartbeat, faStar, faNotesMedical, faPlus} from '@fortawesome/free-solid-svg-icons';
@@ -95,7 +97,7 @@ function App() {
 				<i class="fas fa-user-md"></i>
 				<h3>Consult</h3>
 				<p>This section is a consultation feature for early diagnosis in your health.</p>
-				<a href="consulation.html" class="btn"> Go to consult <FontAwesomeIcon icon={faChevronRight}/> </a>
+				<Link to="/Consultation" > Contact us  Go to consult <FontAwesomeIcon icon={faChevronRight}/> </Link> 
 			</div>
 		</div>
 	</section>

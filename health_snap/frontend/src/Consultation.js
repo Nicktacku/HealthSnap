@@ -1,26 +1,12 @@
-import React from "react"
+import React, { useState } from "react";
+import "./Consultation.css"; //Import CSS file in Consultation
 
-const Consultation = () => {
-    <div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function Consultation () {
+      return (
+        <div className="app">
+      
     </div>
-}
-
+  );
+};
+    
 export default Consultation;
