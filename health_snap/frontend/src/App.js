@@ -271,18 +271,16 @@ function App() {
 		
 		<div class="box">
 			<h3>WebPage Link</h3>
-			<a href="#home"> <FontAwesomeIcon icon={faChevronRight}/>Home</a>
-			<a href="#aboutus"> <FontAwesomeIcon icon={faChevronRight}/>About Us</a>
-			<a href="#services"> <FontAwesomeIcon icon={faChevronRight}/>Services</a>
-			<a href="#doctors"> <FontAwesomeIcon icon={faChevronRight}/>Developers</a>
-			<a href="#review"> <FontAwesomeIcon icon={faChevronRight}/>Feedback</a>
+			<a href="#home"> <FontAwesomeIcon icon={faChevronRight}/> Home</a>
+			<a href="#aboutus"> <FontAwesomeIcon icon={faChevronRight}/> About Us</a>
+			<a href="#services"> <FontAwesomeIcon icon={faChevronRight}/> Services</a>
+			<a href="#doctors"> <FontAwesomeIcon icon={faChevronRight}/> Developers</a>
+			<a href="#review"> <FontAwesomeIcon icon={faChevronRight}/> Feedback</a>
 		</div>
 
 		<div class="box">
 			<h3>Our Services</h3>
-			<a href="#services"> <FontAwesomeIcon icon={faChevronRight}/>Records</a>
-			<a href="#services"> <FontAwesomeIcon icon={faChevronRight}/>Alerts</a>
-			<a href="#services"> <FontAwesomeIcon icon={faChevronRight}/>Consult</a>
+			<a href="#services"> <FontAwesomeIcon icon={faChevronRight}/> Consult</a>
 		</div>
 
 		<div class="box">
@@ -296,13 +294,13 @@ function App() {
 
 		<div class="box">
 			<h3>Follow US</h3>
-			<a href="#"> <FontAwesomeIcon icon={faFacebookF}/> facebook</a>
-			<a href="#"> <FontAwesomeIcon icon={faTwitter}/> twitter</a>
-			<a href="#"> <FontAwesomeIcon icon={faInstagram}/> instagram</a>
+			<a href="#"> <FontAwesomeIcon icon={faFacebookF}/> Facebook</a>
+			<a href="#"> <FontAwesomeIcon icon={faTwitter}/> Twitter</a>
+			<a href="#"> <FontAwesomeIcon icon={faInstagram}/> Instagram</a>
 		</div>
 	</div>
 
-	<div class="credit"> created by <span>SYMPTOMATA</span> | @2024 all rights reserved</div>
+	<div class="credit"> created by <span>SYMPTOMATA TEAM</span> | @2024 All rights reserved</div>
 </section>
 
 
@@ -310,5 +308,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
