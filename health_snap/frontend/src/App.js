@@ -111,7 +111,7 @@ function App() {
 		<div class="box">
 			<img src="Images/E.png" alt=""/>
 			<h3>ELAINE</h3>
-			<span>UI/FRONT END</span>
+			<span>UI/FRONT END DEVELOPER</span>
 			<div class="share">
 				<a href="https://www.facebook.com/Ms.MatchaLatte">
 					<FontAwesomeIcon icon={faFacebookF}/>
@@ -128,7 +128,7 @@ function App() {
 		<div class="box">
 			<img src="Images/S.png" alt=""/>
 			<h3>SOPHIA</h3>
-			<span>FRONT END</span>
+			<span>FRONT END DEVELOPER</span>
 			<div class="share">
 				<a href="https://www.facebook.com/thesophiareyes">
 				<FontAwesomeIcon icon={faFacebookF}/>
@@ -145,7 +145,7 @@ function App() {
 		<div class="box">
 			<img src="Images/J.png" alt=""/>
 			<h3>JINO</h3>
-			<span>FRONT END</span>
+			<span>React.js/FRONT END DEVELOPER</span>
 			<div class="share">
 				<a href="https://www.facebook.com/jino.llamadoo">
 				<FontAwesomeIcon icon={faFacebookF}/>
@@ -162,7 +162,7 @@ function App() {
 		<div class="box">
 			<img src="Images/N.png" alt=""/>
 			<h3>NICHO</h3>
-			<span>BACK END</span>
+			<span>ALGORITHM/BACK END DEVELOPER</span>
 			<div class="share">
 				<a href="https://www.facebook.com/nick.salvada">
 				<FontAwesomeIcon icon={faFacebookF}/>
@@ -177,7 +177,7 @@ function App() {
 		</div>
 
 		<div class="box">
-			<img src="Images/K.png" alt=""/>
+			<img src="Images/K.jpg" alt=""/>
 			<h3>KIA</h3>
 			<span>DOCUMENTATION</span>
 			<div class="share">
@@ -216,9 +216,8 @@ function App() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
-            <p class="text">During my testing, I encountered no glitches, crashes, or performance issues. The application responded promptly to commands, and data syncing across devices was seamless. The developers seem to have invested in optimizing performance, resulting in a reliable and stable platform.
-</p>
-        </div>
+            <p class="text">During my testing, I encountered no glitches, crashes, or performance issues. The application responded promptly to commands, and data syncing across devices was seamless. The developers seem to have invested in optimizing performance, resulting in a reliable and stable platform.</p>
+	    </div>
         <div class="box">
             <img src="Images/S3.gif" alt=""/>
             <h3>Amira Mugas</h3>
