@@ -20,12 +20,12 @@ function ConsultationP1() {
     const response = await fetch("http://127.0.0.1:8000/symptom/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ symptoms: symptoms }),
+      body: JSON.stringify({ symptoms: ["u1"] }),
     });
 
     const data = await response.json();
-    console.log("ito binalik pre", data);
-    setData(data);
+    console.log("ito binalik pre", data.result);
+    setData(data.result);
   };
 
   const addValue = (e) => {
@@ -288,13 +288,7 @@ function ConsultationP1() {
           <h2 style={{ marginTop: "20px" }}>
             Based on your input, it is possible that you have:
           </h2>
-          {Object.keys(datas).map((data) => (
-            <li style={{ marginLeft: "30px" }} className="list-item">
-              {data} {datas[data]}
-              <span id=""></span>%
-            </li>
-          ))}
-          {/* <li style={{ marginLeft: "30px" }} className="list-item">
+          <li style={{ marginLeft: "30px" }} className="list-item">
             Common Cold - <span id="commonColdPercentage"></span>%
           </li>
           <li style={{ marginLeft: "30px" }} className="list-item">
@@ -309,7 +303,7 @@ function ConsultationP1() {
           </li>
           <li style={{ marginLeft: "30px" }} className="list-item">
             Chickenpox - <span id="chickenpoxPercentage"></span>%
-          </li> */}
+          </li>
         </ul>
       </div>
     </div>

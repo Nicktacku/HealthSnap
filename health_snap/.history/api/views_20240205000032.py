@@ -9,7 +9,6 @@ def home(request):
 
 @api_view(["POST"])
 def symptom_checker(request):
-    print("REQUEST DATA ", request.data["symptoms"])
     states = ["no sickness", "common cold", "influenza", "Acute Bronchitis", "tonsillopharyngitis", "chickenpox"]
     inputs = ["u1", "u2", "u3",
             "u4", "u5", "u6",
