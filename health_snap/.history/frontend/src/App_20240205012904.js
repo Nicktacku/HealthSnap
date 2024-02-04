@@ -25,13 +25,13 @@ import {
 
 import Header from "./Header";
 import HomePage from "./HomePage";
-import ConsultationP1 from "./ConsultationP1";
+import Consultation from "./Consultation";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Header />}>
       <Route index element={<HomePage />} />
-      <Route path="/Consultation" element={<ConsultationP1 />} />
+      <Route element={<Consultation />} />
     </Route>
   )
 );

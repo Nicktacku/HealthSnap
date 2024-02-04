@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 
 function ConsultationP1() {
   const [page1, setPage1] = useState("Block");
-  const [page2, setPage2] = useState("None");
+  const [page2, setPage2] = useState("Block");
 
   const toPage2 = () => {
     setPage1("None");
-    setPage2("Block");
   };
   const toPage3 = () => {
     setPage2("None");
@@ -27,7 +26,6 @@ function ConsultationP1() {
         <button onClick={toPage2}>Proceed</button>
       </div>
 
-      {/* Start of page 2 */}
       <div className="container" id="page2" style={{ display: `${page2}` }}>
         <h1 className="acustom-font1">Health Consultation - Page 2</h1>
         <div id="symptomsSection">
@@ -138,7 +136,7 @@ function ConsultationP1() {
             pus
           </label>
         </div>
-        <button onclick={toPage3}>Next</button>
+        <button onclick="toPage3()">Next</button>
       </div>
     </div>
   );

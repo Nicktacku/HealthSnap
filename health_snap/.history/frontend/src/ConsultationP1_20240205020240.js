@@ -27,7 +27,6 @@ function ConsultationP1() {
         <button onClick={toPage2}>Proceed</button>
       </div>
 
-      {/* Start of page 2 */}
       <div className="container" id="page2" style={{ display: `${page2}` }}>
         <h1 className="acustom-font1">Health Consultation - Page 2</h1>
         <div id="symptomsSection">

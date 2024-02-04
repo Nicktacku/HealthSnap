@@ -25,22 +25,19 @@ import {
 
 import Header from "./Header";
 import HomePage from "./HomePage";
-import ConsultationP1 from "./ConsultationP1";
+import Consult from "./Consult";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Header />}>
       <Route index element={<HomePage />} />
-      <Route path="/Consultation" element={<ConsultationP1 />} />
+      <Route element={<Consult />} />
     </Route>
   )
 );
 
 function App() {
-  return (
-    <div className="App">
-      <RouterProvider router={router} />
-    </div>
-  );
+  return;
+  <div className="App"></div>;
 }
 export default App;
