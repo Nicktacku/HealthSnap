@@ -273,7 +273,6 @@ function App() {
 			<h3>WebPage Link</h3>
 			<a href="#home"> <FontAwesomeIcon icon={faChevronRight}/>Home</a>
 			<a href="#aboutus"> <FontAwesomeIcon icon={faChevronRight}/>About Us</a>
-			<a href="#book"> <FontAwesomeIcon icon={faChevronRight}/>Account</a>
 			<a href="#services"> <FontAwesomeIcon icon={faChevronRight}/>Services</a>
 			<a href="#doctors"> <FontAwesomeIcon icon={faChevronRight}/>Developers</a>
 			<a href="#review"> <FontAwesomeIcon icon={faChevronRight}/>Feedback</a>
