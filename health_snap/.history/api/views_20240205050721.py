@@ -30,7 +30,7 @@ def symptom_checker(request):
                 ("no sickness", "u7"): {"common cold", "influenza", "Acute Bronchitis"},
                 ("no sickness", "u8"): {"influenza", "tonsillopharyngitis", "chickenpox"},
                 ("no sickness", "u9"): {"influenza", "tonsillopharyngitis"},
-                ("no sickness", "u10"): {"influenza", "tonsillopharyngitis", "Acute Bronchitis"},
+                ("no sickness", "u10"): {"influenza", "tonsillopharyngitis"},
                 ("no sickness", "cc4"): {"common cold"},
                 ("no sickness", "i2"): {"influenza"},
                 ("no sickness", "ab1"): {"Acute Bronchitis"},
@@ -54,7 +54,7 @@ def symptom_checker(request):
                 ("common cold", "u7"): {"common cold", "influenza", "Acute Bronchitis"},
                 ("common cold", "u8"): {"influenza", "tonsillopharyngitis", "chickenpox"},
                 ("common cold", "u9"): {"influenza", "tonsillopharyngitis"},
-                ("common cold", "u10"): {"influenza", "tonsillopharyngitis", "Acute Bronchitis"},
+                ("common cold", "u10"): {"influenza", "tonsillopharyngitis"},
                 ("common cold", "cc4"): {"common cold"},
                 ("common cold", "i2"): {"influenza"},
                 ("common cold", "ab1"): {"Acute Bronchitis"},
@@ -78,7 +78,7 @@ def symptom_checker(request):
                 ("influenza", "u7"): {"common cold", "influenza", "Acute Bronchitis"},
                 ("influenza", "u8"): {"influenza", "tonsillopharyngitis", "chickenpox"},
                 ("influenza", "u9"): {"influenza", "tonsillopharyngitis"},
-                ("influenza", "u10"): {"influenza", "tonsillopharyngitis", "Acute Bronchitis"},
+                ("influenza", "u10"): {"influenza", "tonsillopharyngitis"},
                 ("influenza", "cc4"): {"common cold"},
                 ("influenza", "i2"): {"influenza"},
                 ("influenza", "ab1"): {"Acute Bronchitis"},
@@ -102,7 +102,7 @@ def symptom_checker(request):
                 ("Acute Bronchitis", "u7"): {"common cold", "influenza", "Acute Bronchitis"},
                 ("Acute Bronchitis", "u8"): {"influenza", "tonsillopharyngitis", "chickenpox"},
                 ("Acute Bronchitis", "u9"): {"influenza", "tonsillopharyngitis"},
-                ("Acute Bronchitis", "u10"): {"influenza", "tonsillopharyngitis", "Acute Bronchitis"},
+                ("Acute Bronchitis", "u10"): {"influenza", "tonsillopharyngitis"},
                 ("Acute Bronchitis", "cc4"): {"common cold"},
                 ("Acute Bronchitis", "i2"): {"influenza"},
                 ("Acute Bronchitis", "ab1"): {"Acute Bronchitis"},
@@ -126,7 +126,7 @@ def symptom_checker(request):
                 ("tonsillopharyngitis", "u7"): {"common cold", "influenza", "Acute Bronchitis"},
                 ("tonsillopharyngitis", "u8"): {"influenza", "tonsillopharyngitis", "chickenpox"},
                 ("tonsillopharyngitis", "u9"): {"influenza", "tonsillopharyngitis"},
-                ("tonsillopharyngitis", "u10"): {"influenza", "tonsillopharyngitis", "Acute Bronchitis"},
+                ("tonsillopharyngitis", "u10"): {"influenza", "tonsillopharyngitis"},
                 ("tonsillopharyngitis", "cc4"): {"common cold"},
                 ("tonsillopharyngitis", "i2"): {"influenza"},
                 ("tonsillopharyngitis", "ab1"): {"Acute Bronchitis"},
@@ -150,7 +150,7 @@ def symptom_checker(request):
                 ("chickenpox", "u7"): {"common cold", "influenza", "Acute Bronchitis"},
                 ("chickenpox", "u8"): {"influenza", "tonsillopharyngitis", "chickenpox"},
                 ("chickenpox", "u9"): {"influenza", "tonsillopharyngitis"},
-                ("chickenpox", "u10"): {"influenza", "tonsillopharyngitis", "Acute Bronchitis"},
+                ("chickenpox", "u10"): {"influenza", "tonsillopharyngitis"},
                 ("chickenpox", "cc4"): {"common cold"},
                 ("chickenpox", "i2"): {"influenza"},
                 ("chickenpox", "ab1"): {"Acute Bronchitis"},
@@ -170,6 +170,6 @@ def symptom_checker(request):
     final = {"common cold", "influenza", "Acute Bronchitis", "tonsillopharyngitis", "chickenpox"}
 
     nfa = NFA(states, inputs, transition, initial, final)
-    result = nfa.run(list(set(request.data["symptoms"])))
+    result = nfa.run(request.data["symptoms"])
 
     return Response(result)

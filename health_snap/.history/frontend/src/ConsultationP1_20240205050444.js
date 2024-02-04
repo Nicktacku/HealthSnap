@@ -113,7 +113,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Muscle pain"
-              value="u6"
+              value="u5"
               onChange={addValue}
             />
             Muscle pain

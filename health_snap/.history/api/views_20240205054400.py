@@ -15,7 +15,7 @@ def symptom_checker(request):
             "u4", "u5", "u6",
             "u7", "u8", "u9",
             "u10", "cc4", "i2",
-            "ab1", "ab3", "ab10",
+            "ab1", "ab3, "Acute Bronchitis"", "ab10",
             "to1", "to2", "to7",
             "to9", "to10", "ch3",
             "ch5", "ch7", "ch8"]

@@ -113,7 +113,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Muscle pain"
-              value="u6"
+              value="u5"
               onChange={addValue}
             />
             Muscle pain
@@ -212,7 +212,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="E or S"
-              value="to2"
+              value="tO2"
               onChange={addValue}
             />
             Enlarged or swollen lymph nodes or Ear pain
