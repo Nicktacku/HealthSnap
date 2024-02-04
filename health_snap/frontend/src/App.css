@@ -308,7 +308,8 @@ section:nth-child(even) {
     color: var(--dark-pink);
     border-radius: .5rem;
     border: var(--border);
-    margin: .3rem;
+    border: 10%;
+    margin: .6rem;
 }
 
 .doctors .box-container .box .share a:hover {

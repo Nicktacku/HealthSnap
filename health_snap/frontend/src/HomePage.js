@@ -301,7 +301,7 @@ const HomePage = () => {
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </div>
-            <br></br>
+            
             <p class="text">We want to know your feedback</p>
             <a href="feedback.html" class="btn">
               ADD FEEDBACK <FontAwesomeIcon icon={faPlus} />
