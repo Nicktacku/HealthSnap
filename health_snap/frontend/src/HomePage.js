@@ -41,27 +41,27 @@ const HomePage = () => {
       </section>
       {/*!--home section ends*/}
       {/*!--icons section starts*/}
-      <section class="icons-container" id="icons">
-        <div class="icons">
-          <FontAwesomeIcon icon={faUserMd} />
+      <section className="icons-container" id="icons" >
+        <div className="icons">
+          <FontAwesomeIcon icon={faUserMd} size="5x" className="change-iconColor" />
           <h3>Sympto-Mata</h3>
           <p>An application that cares.</p>
         </div>
 
-        <div class="icons">
-          <FontAwesomeIcon icon={faHeartbeat} />
+        <div className="icons">
+          <FontAwesomeIcon icon={faHeartbeat} size="5x" className="change-iconColor" />
           <h3>Liked by Users</h3>
           <p>User Friendly Application.</p>
         </div>
 
-        <div class="icons">
-          <FontAwesomeIcon icon={faStar} />
-          <h3>Vission and Mission</h3>
+        <div className="icons">
+          <FontAwesomeIcon icon={faStar} size="5x" className="change-iconColor" />
+          <h3>Vision and Mission</h3>
           <p>Number 1 goal is to serve you.</p>
         </div>
 
-        <div class="icons">
-          <FontAwesomeIcon icon={faNotesMedical} />
+        <div className="icons">
+          <FontAwesomeIcon icon={faNotesMedical} size="5x" className="change-iconColor" />
           <h3>Easy Access</h3>
           <p>You can use to mobile and desktop.</p>
         </div>

@@ -230,6 +230,18 @@ section:nth-child(even) {
     .container .image img{
         width: 100%;
     }
+
+    .change-iconColor{
+        color: rgb(124, 11, 112)
+    }
+
+    .change-bgColor
+    {
+      background-color: #D8248A;
+    }
+
+
+
 /* media queries */
 @media (max-width:  991px) {
     html {
