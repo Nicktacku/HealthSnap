@@ -166,7 +166,7 @@ section:nth-child(even) {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: #ffffff;
+    background-color: #f6f1f1;
 }
 
 .icons-container .icons {
@@ -288,7 +288,7 @@ section:nth-child(even) {
 
 .doctors .box-container .box h3 {
     color: var(--black);
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 .doctors .box-container .box span {
@@ -304,11 +304,12 @@ section:nth-child(even) {
     height: 5rem;
     width: 5rem;
     line-height: 4.5rem;
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--dark-pink);
     border-radius: .5rem;
     border: var(--border);
-    margin: .3rem;
+    border: 10%;
+    margin: .6rem;
 }
 
 .doctors .box-container .box .share a:hover {
@@ -316,6 +317,7 @@ section:nth-child(even) {
     color: #fff;
     box-shadow: var(--box-shadow);
 }
+
 
 .book.row{
     display: flex;

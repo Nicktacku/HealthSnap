@@ -103,7 +103,7 @@ const HomePage = () => {
       {/*!--about section ends--*/}
 
       {/*!--services section starts--*/}
-      <section class="services" id="services" style={{backgroundColor: "#FFFFFF"}}>
+      <section class="services" id="services" style={{backgroundColor: "#FFFFFF"}}> 
         <h1 class="heading">
           {" "}
           our <span>services</span>
@@ -236,7 +236,7 @@ const HomePage = () => {
         <div class="box-container">
           <div class="box">
             <img src="Images/S3.gif" alt="" />
-            <h3>Bogart Batumbakal</h3>
+            <h3>Eren Yeager</h3>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -245,7 +245,8 @@ const HomePage = () => {
               <i class="fas fa-star"></i>
             </div>
             <p class="text">
-              During my testing, I encountered no glitches, crashes, or
+            <br></br>
+              During my testing, I said "Tatakae" and I encountered no glitches, crashes, or
               performance issues. The application responded promptly to
               commands, and data syncing across devices was seamless. The
               developers seem to have invested in optimizing performance,
@@ -254,7 +255,7 @@ const HomePage = () => {
           </div>
           <div class="box">
             <img src="Images/S3.gif" alt="" />
-            <h3>Amira Mugas</h3>
+            <h3>Mikasa Ackerman</h3>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -263,15 +264,16 @@ const HomePage = () => {
               <i class="fas fa-star"></i>
             </div>
             <p class="text">
+            <br></br>
               I recently had the opportunity to explore Symptomata, and I am
               thoroughly impressed with its functionality, user interface, and
               overall performance. As a user with diverse needs, I found that
-              the application excelled in several key areas.
+              the application excelled in several key areas. Ereeeh!
             </p>
           </div>
           <div class="box">
             <img src="Images/S3.gif" alt="" />
-            <h3>Justin Santos</h3>
+            <h3>Bertholdogx Eaten</h3>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -280,6 +282,7 @@ const HomePage = () => {
               <i class="fas fa-star"></i>
             </div>
             <p class="text">
+            <br></br>
               One of the standout features of Symptomata is its intuitive and
               user-friendly interface. Navigating through the various sections
               is a breeze, and the well-designed layout ensures that users can
@@ -298,6 +301,7 @@ const HomePage = () => {
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </div>
+            
             <p class="text">We want to know your feedback</p>
             <a href="feedback.html" class="btn">
               ADD FEEDBACK <FontAwesomeIcon icon={faPlus} />
@@ -347,15 +351,15 @@ const HomePage = () => {
             <h3>Contact Us</h3>
             <a href="#">
               {" "}
-              <FontAwesomeIcon icon={faChevronRight} /> +123-456-7890
+              <FontAwesomeIcon icon={faChevronRight} /> +639-206-89123
             </a>
             <a href="#">
               {" "}
-              <FontAwesomeIcon icon={faChevronRight} /> +639-456-7890
+              <FontAwesomeIcon icon={faChevronRight} />  621-7098
             </a>
             <a href="#">
               {" "}
-              <FontAwesomeIcon icon={faChevronRight} /> meow@gmail.com
+              <FontAwesomeIcon icon={faChevronRight} /> healthsnap@gmail.com
             </a>
             <a href="#">
               {" "}
@@ -382,7 +386,7 @@ const HomePage = () => {
 
         <div class="credit">
           {" "}
-          created by <span>SYMPTOMATA TEAM</span> | @2024 All rights reserved
+          Created by <span>SYMPTOMATA TEAM</span> | @2024 All Rights Reserved
         </div>
       </section>
     </div>
