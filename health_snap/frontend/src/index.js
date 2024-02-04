@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import ConsultationP1 from "./ConsultationP1";
+
+import ConsultationP2 from "./ConsultationP2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ConsultationP1 />
+    <ConsultationP2/>
   </React.StrictMode>
 );
 

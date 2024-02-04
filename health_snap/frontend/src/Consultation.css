@@ -18,9 +18,14 @@
     font-size: 15px;
 }
 
+.font-size-change
+{
+  font-size: 25px;
+}
+
 .a-custom-font
 {
-    font-size: 30px;
+    font-size: 3px;
 }
 
 
@@ -204,7 +209,9 @@ section:nth-child(even) {
     }
 
     input[type="checkbox"] {
-      margin-right: 5px;
+      margin-right: 15px;
+      width: 25px;
+      height: 25px;
     }
 
     button {
