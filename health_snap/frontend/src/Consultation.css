@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600&family=Roboto&display=swap');
 
 :root {
-    --green: #16a085;
+    --green: #a40c6f;
     --black: #444;
     --light-color: #777;
     --box-shadow: .5rem .5rem 0 #D8BFD8;
@@ -36,7 +36,7 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    text-transform: capitalize;
+    text-transform: none;
     transition: all .2s ease-out;
     text-decoration: none;
 }
