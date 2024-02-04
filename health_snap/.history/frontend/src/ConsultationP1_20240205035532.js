@@ -3,7 +3,7 @@ import "./Consultation.css"; //Import CSS file in Consultation
 import { Link } from "react-router-dom";
 
 function ConsultationP1() {
-  var symptoms = [];
+  var symptoms1 = [];
   const [page1, setPage1] = useState("Block");
   const [page2, setPage2] = useState("None");
   const [page3, setPage3] = useState("None");
@@ -20,23 +20,23 @@ function ConsultationP1() {
     const response = await fetch("http://127.0.0.1:8000/symptom/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ symptoms: symptoms }),
+      body: JSON.stringify({ symptoms: ["u1"] }),
     });
 
     const data = await response.json();
     console.log("ito binalik pre", data);
-    setData(data);
+    setData(data.result);
   };
 
   const addValue = (e) => {
     var symptom = e.target.value;
     if (e.target.checked) {
       console.log(symptom);
-      symptoms.push(symptom);
-      console.log(symptoms);
+      symptoms1.push(symptom);
+      console.log(symptoms1);
     } else {
-      var symptomIndex = symptoms.indexOf(symptom);
-      symptoms.splice(symptomIndex, 1);
+      var symptomIndex = symptoms1.indexOf(symptom);
+      symptoms1.splice(symptomIndex, 1);
     }
   };
 
@@ -48,7 +48,7 @@ function ConsultationP1() {
         </div>
         <h1 className="acustom-font1">Health Consultation - Page 1</h1>
         <label for="healthConcern" className="custom-font">
-          Check all the possible symptoms that you feel
+          Check all the possible symptoms1 that you feel
         </label>
 
         <button onClick={toPage2}>Proceed</button>
@@ -57,8 +57,8 @@ function ConsultationP1() {
       {/* Start of page 2 */}
       <div className="container" id="page2" style={{ display: `${page2}` }}>
         <h1 className="acustom-font1">Health Consultation - Page 2</h1>
-        <div id="symptomsSection">
-          <h2>Symptoms</h2>
+        <div id="symptoms1Section">
+          <h2>Symptoms1</h2>
           <br></br>
           <label className="font-size-change">
             <input
@@ -288,13 +288,7 @@ function ConsultationP1() {
           <h2 style={{ marginTop: "20px" }}>
             Based on your input, it is possible that you have:
           </h2>
-          {Object.keys(datas).map((data) => (
-            <li style={{ marginLeft: "30px" }} className="list-item">
-              {data} {datas[data]}
-              <span id=""></span>%
-            </li>
-          ))}
-          {/* <li style={{ marginLeft: "30px" }} className="list-item">
+          <li style={{ marginLeft: "30px" }} className="list-item">
             Common Cold - <span id="commonColdPercentage"></span>%
           </li>
           <li style={{ marginLeft: "30px" }} className="list-item">
@@ -309,7 +303,7 @@ function ConsultationP1() {
           </li>
           <li style={{ marginLeft: "30px" }} className="list-item">
             Chickenpox - <span id="chickenpoxPercentage"></span>%
-          </li> */}
+          </li>
         </ul>
       </div>
     </div>

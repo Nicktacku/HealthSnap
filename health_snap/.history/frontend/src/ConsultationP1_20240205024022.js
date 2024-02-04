@@ -3,40 +3,20 @@ import "./Consultation.css"; //Import CSS file in Consultation
 import { Link } from "react-router-dom";
 
 function ConsultationP1() {
-  var symptoms = [];
   const [page1, setPage1] = useState("Block");
   const [page2, setPage2] = useState("None");
-  const [page3, setPage3] = useState("None");
-  const [datas, setData] = useState("");
 
   const toPage2 = () => {
     setPage1("None");
     setPage2("Block");
   };
-  const toPage3 = async () => {
+  const toPage3 = () => {
     setPage2("None");
-    setPage3("Block");
-
-    const response = await fetch("http://127.0.0.1:8000/symptom/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ symptoms: symptoms }),
-    });
-
-    const data = await response.json();
-    console.log("ito binalik pre", data);
-    setData(data);
   };
 
   const addValue = (e) => {
-    var symptom = e.target.value;
     if (e.target.checked) {
-      console.log(symptom);
-      symptoms.push(symptom);
-      console.log(symptoms);
-    } else {
-      var symptomIndex = symptoms.indexOf(symptom);
-      symptoms.splice(symptomIndex, 1);
+      console.log(e.target.value);
     }
   };
 
@@ -47,7 +27,7 @@ function ConsultationP1() {
           <img src={require("./assets/S1.gif")} alt="" />
         </div>
         <h1 className="acustom-font1">Health Consultation - Page 1</h1>
-        <label for="healthConcern" className="custom-font">
+        <label for="healthConcern" class="custom-font">
           Check all the possible symptoms that you feel
         </label>
 
@@ -141,19 +121,14 @@ function ConsultationP1() {
             Feel like vomiting
           </label>
           <label className="font-size-change">
-            <input
-              type="checkbox"
-              id="P,S or I"
-              value="u10"
-              onChange={addValue}
-            />
+            <input type="checkbox" id="P,S or I" value="" onChange={addValue} />
             Pain, scratchiness or irritation of the throat
           </label>
           <label className="font-size-change">
             <input
               type="checkbox"
               id="Headache or Joint pain"
-              value="u5"
+              value=""
               onChange={addValue}
             />
             Headache or Joint pain
@@ -162,7 +137,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Poor appetite"
-              value="u8"
+              value=""
               onChange={addValue}
             />
             Poor appetite
@@ -171,7 +146,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Chest discomfort"
-              value="ab1"
+              value=""
               onChange={addValue}
             />
             Chest discomfort
@@ -180,7 +155,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Difficulty breathing"
-              value="ab3"
+              value=""
               onChange={addValue}
             />
             Difficulty breathing
@@ -189,7 +164,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Whistling breathing"
-              value="ab10"
+              value=""
               onChange={addValue}
             />
             Whistling breathing
@@ -198,25 +173,20 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Bad breath"
-              value="to1"
+              value=""
               onChange={addValue}
             />
             Bad breath
           </label>
           <label className="font-size-change">
-            <input
-              type="checkbox"
-              id="E or S"
-              value="to2"
-              onChange={addValue}
-            />
+            <input type="checkbox" id="E or S" value="" onChange={addValue} />
             Enlarged or swollen lymph nodes or Ear pain
           </label>
           <label className="font-size-change">
             <input
               type="checkbox"
               id="Poor appetite or Weight loss"
-              value="u8"
+              value=""
               onChange={addValue}
             />
             Poor appetite or Weight loss
@@ -225,7 +195,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Strained voice or Loss of voice"
-              value="to9"
+              value=""
               onChange={addValue}
             />
             Strained voice or Loss of voice
@@ -234,7 +204,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Swollen/enlarged T or R"
-              value="to10"
+              value=""
               onChange={addValue}
             />
             Swollen/enlarged tonsils or Red tonsils or Light spots on tonsils
@@ -243,7 +213,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Hard skin"
-              value="ch3"
+              value=""
               onChange={addValue}
             />
             Hard skin
@@ -252,7 +222,7 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Itchy skin"
-              value="ch5"
+              value=""
               onChange={addValue}
             />
             Itchy skin
@@ -261,15 +231,16 @@ function ConsultationP1() {
             <input
               type="checkbox"
               id="Skin rash and redness"
-              value="ch7"
+              value=""
               onChange={addValue}
             />
             Skin rash and redness
           </label>
           <label className="font-size-change">
             <input
-              value="ch8"
+              value=""
               onChange={addValue}
+              ut
               type="checkbox"
               id="Small pockets of fluid beneath the skin or Red lesions filled with pus"
             />
@@ -277,40 +248,7 @@ function ConsultationP1() {
             pus
           </label>
         </div>
-        <button onClick={toPage3}>Next</button>
-      </div>
-
-      <div className="container" id="page3" style={{ display: `${page3}` }}>
-        <h1 style={{ marginLeft: "140px", marginTop: "20px" }}>
-          HEALTH CONSULTATION RESULT
-        </h1>
-        <ul className="list" style={{ marginLeft: "20px" }}>
-          <h2 style={{ marginTop: "20px" }}>
-            Based on your input, it is possible that you have:
-          </h2>
-          {Object.keys(datas).map((data) => (
-            <li style={{ marginLeft: "30px" }} className="list-item">
-              {data} {datas[data]}
-              <span id=""></span>%
-            </li>
-          ))}
-          {/* <li style={{ marginLeft: "30px" }} className="list-item">
-            Common Cold - <span id="commonColdPercentage"></span>%
-          </li>
-          <li style={{ marginLeft: "30px" }} className="list-item">
-            Influenza - <span id="influenzaPercentage"></span>%
-          </li>
-          <li style={{ marginLeft: "30px" }} className="list-item">
-            Acute Bronchitis - <span id="acuteBronchitisPercentage"></span>%
-          </li>
-          <li style={{ marginLeft: "30px" }} className="list-item">
-            Tonsillopharyngitis -{" "}
-            <span id="tonsillopharyngitisPercentage"></span>%
-          </li>
-          <li style={{ marginLeft: "30px" }} className="list-item">
-            Chickenpox - <span id="chickenpoxPercentage"></span>%
-          </li> */}
-        </ul>
+        <button onclick={toPage3}>Next</button>
       </div>
     </div>
   );

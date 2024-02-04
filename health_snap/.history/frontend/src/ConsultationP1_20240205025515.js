@@ -6,26 +6,13 @@ function ConsultationP1() {
   var symptoms = [];
   const [page1, setPage1] = useState("Block");
   const [page2, setPage2] = useState("None");
-  const [page3, setPage3] = useState("None");
-  const [datas, setData] = useState("");
 
   const toPage2 = () => {
     setPage1("None");
     setPage2("Block");
   };
-  const toPage3 = async () => {
+  const toPage3 = () => {
     setPage2("None");
-    setPage3("Block");
-
-    const response = await fetch("http://127.0.0.1:8000/symptom/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ symptoms: symptoms }),
-    });
-
-    const data = await response.json();
-    console.log("ito binalik pre", data);
-    setData(data);
   };
 
   const addValue = (e) => {
@@ -35,8 +22,7 @@ function ConsultationP1() {
       symptoms.push(symptom);
       console.log(symptoms);
     } else {
-      var symptomIndex = symptoms.indexOf(symptom);
-      symptoms.splice(symptomIndex, 1);
+      var symptomIndex = symptoms.indexOf();
     }
   };
 
@@ -277,40 +263,7 @@ function ConsultationP1() {
             pus
           </label>
         </div>
-        <button onClick={toPage3}>Next</button>
-      </div>
-
-      <div className="container" id="page3" style={{ display: `${page3}` }}>
-        <h1 style={{ marginLeft: "140px", marginTop: "20px" }}>
-          HEALTH CONSULTATION RESULT
-        </h1>
-        <ul className="list" style={{ marginLeft: "20px" }}>
-          <h2 style={{ marginTop: "20px" }}>
-            Based on your input, it is possible that you have:
-          </h2>
-          {Object.keys(datas).map((data) => (
-            <li style={{ marginLeft: "30px" }} className="list-item">
-              {data} {datas[data]}
-              <span id=""></span>%
-            </li>
-          ))}
-          {/* <li style={{ marginLeft: "30px" }} className="list-item">
-            Common Cold - <span id="commonColdPercentage"></span>%
-          </li>
-          <li style={{ marginLeft: "30px" }} className="list-item">
-            Influenza - <span id="influenzaPercentage"></span>%
-          </li>
-          <li style={{ marginLeft: "30px" }} className="list-item">
-            Acute Bronchitis - <span id="acuteBronchitisPercentage"></span>%
-          </li>
-          <li style={{ marginLeft: "30px" }} className="list-item">
-            Tonsillopharyngitis -{" "}
-            <span id="tonsillopharyngitisPercentage"></span>%
-          </li>
-          <li style={{ marginLeft: "30px" }} className="list-item">
-            Chickenpox - <span id="chickenpoxPercentage"></span>%
-          </li> */}
-        </ul>
+        <button onclick={toPage3}>Next</button>
       </div>
     </div>
   );

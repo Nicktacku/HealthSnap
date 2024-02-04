@@ -25,7 +25,7 @@ function ConsultationP1() {
 
     const data = await response.json();
     console.log("ito binalik pre", data);
-    setData(data);
+    setData(data.result);
   };
 
   const addValue = (e) => {
@@ -289,10 +289,9 @@ function ConsultationP1() {
             Based on your input, it is possible that you have:
           </h2>
           {Object.keys(datas).map((data) => (
-            <li style={{ marginLeft: "30px" }} className="list-item">
-              {data} {datas[data]}
-              <span id=""></span>%
-            </li>
+            <p>
+              {data}: {datas[data]}%
+            </p>
           ))}
           {/* <li style={{ marginLeft: "30px" }} className="list-item">
             Common Cold - <span id="commonColdPercentage"></span>%

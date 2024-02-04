@@ -290,8 +290,7 @@ function ConsultationP1() {
           </h2>
           {Object.keys(datas).map((data) => (
             <li style={{ marginLeft: "30px" }} className="list-item">
-              {data} {datas[data]}
-              <span id=""></span>%
+              data <span id=""></span>%
             </li>
           ))}
           {/* <li style={{ marginLeft: "30px" }} className="list-item">
