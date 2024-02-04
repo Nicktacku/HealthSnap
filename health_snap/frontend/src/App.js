@@ -1,7 +1,7 @@
 import "./App.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight, faUserMd, faHeartbeat, faStar, faNotesMedical, faPlus} from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faInstagram,} from '@fortawesome/free-brands-svg-icons';
 
 function App() {
   return (
