@@ -15,6 +15,9 @@ class NFA:
                 new_sicknesses = new_sicknesses.union(self.transitions[(q,symptoms[0])])
             symptoms = symptoms[1:]
             sicknesses = new_sicknesses
+            print("symptoms", symptoms)
+            print("sicknesses", sicknesses)
+
             for sickness in sicknesses:
                 if sickness in self.included:
                     self.included[sickness] += 1
@@ -201,4 +204,4 @@ nfa = NFA(states, inputs, transition, initial, final)
 
 
 if __name__ == "__main__":
-    print(nfa.run(["u1", "u2", "cc4"]))
+    print(nfa.run(["cc4", "u5"]))
