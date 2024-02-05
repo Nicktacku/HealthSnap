@@ -11,7 +11,6 @@ import {
 import Header from "./Header";
 import HomePage from "./HomePage";
 import Consultation from "./Consultation";
-import Feedback from "./Feedback";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -310,7 +310,7 @@ section:nth-child(even) {
     border: var(--border);
     border: 10%;
     margin: .6rem;
-    padding: 0 .8rem;
+    padding: .5rem 0;
 }
 
 .doctors .box-container .box .share a:hover {

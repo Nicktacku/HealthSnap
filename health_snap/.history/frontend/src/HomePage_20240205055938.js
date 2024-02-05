@@ -331,9 +331,9 @@ const HomePage = () => {
             <br />
             <br />
             <p class="text">We want to know your feedback</p>
-            <Link to="/Feedback" class="btn">
+            <a href="feedback.html" class="btn">
               ADD FEEDBACK <FontAwesomeIcon icon={faPlus} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
