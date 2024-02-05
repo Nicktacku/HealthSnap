@@ -143,7 +143,7 @@ const HomePage = () => {
             </p>
             <Link to="/Consultation">
               {" "}
-              Contact us Go to consult <FontAwesomeIcon
+              Go to Consult Now <FontAwesomeIcon
                 icon={faChevronRight}
               />{" "}
             </Link>
