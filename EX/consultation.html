@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthSnap - Consultation</title>
+  <link rel="icon" href="ADETLOGO2.png" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600&family=Roboto&display=swap');
+
+:root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--darkest-teal);
+    --dark-teal:  #008080;
+    --darkest-teal: #003A51;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: ;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+       background: var(--pink); 
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+.heading span {
+    text-transform: uppercase;
+    color: var(--darkest-teal);
+}
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: linear-gradient(90deg, #008080, #FFFFFF);
+}
+.btn span {
+    padding: 0.7rem 1rem;
+    border-radius:  .5rem;
+    background: var(--dark-teal);
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+.btn:hover {
+    background: var(--dark-teal);
+    color: #fff;
+}
+
+.btn:hover span {
+    color: var(--green);
+    background: #fff;
+    margin-left: 1rem;
+
+}
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  text-shadow: var(--text-shadow);
+  text-transform: uppercase;
+  color: var(--black);
+  font-size: 5rem;
+  letter-spacing: .4rem;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: var(--green);
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  border: var(--border);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--black);
+  cursor: pointer;
+  font-size: 1.7rem;
+  background: #fff;
+}
+.btn span {
+  padding: 0.7rem 1rem;
+  border-radius:  .5rem;
+  background: var(--dark-teal);
+  color: #fff;
+  margin-left: 0.5rem;
+}
+
+.btn:hover {
+  background: var(--dark-teal);
+  color: #fff;
+}
+
+.btn:hover span {
+  color: var(--dark-teal);
+  background: #fff;
+  margin-left: 1rem;
+}
+
+.header {
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #001F3F, #008080, #FFFFFF);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    background: linear-gradient(90deg, #001F3F, #008080);
+  -webkit-background-clip: text;
+   color: transparent;
+   margin-left: 2rem;
+
+}
+
+.header .navbar a:hover {
+  color: yellow;
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #BFD8C8;
+      margin: 0;
+      padding: 500;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 60px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+/* CSS CONSYLT*/
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: var(--green);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--darkest-teal);
+    }
+
+    .container .image img{
+        width: 100%;
+    }
+/* media queries */
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+
+            .header {
+                padding: 2rem;
+            }
+        }
+@media (max-width: 768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: linear-gradient(90deg, #008080, #FFFFFF);
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a {
+        font-size: 1.7rem;
+        background: linear-gradient(90deg, #001F3F, #008080);
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-left: 2rem;
+        display: block;
+        padding: 1rem;
+    }
+
+    .header .navbar a:hover {
+        color: yellow;
+    }
+}
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+        }
+
+  </style>
+</head>
+<body>
+  <!--header starts-->
+  <header class="header">
+    <a href="s.html" class="logo"> <image src="ADETLOGO.png"></i></a>
+
+    <nav class="navbar">
+      <a href="EX.html">Home</a>
+      <a href="EX.html">About Us</a>
+      <a href="EX.html">Services</a>
+      <a href="EX.html">Developers</a>
+      <a href="EX.html">Feedback</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </header>
+<section>
+
+  <div class="container" id="page1">
+    <div class="image">
+      <img src="EC1.gif" alt="">
+    </div>
+    <h1>Health Consultation - Page 1</h1>
+    <label for="healthConcern">Check all the possible symptoms that you feel</label>
+    <select id="healthConcern">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <button onclick="showPage2()">Proceed</button>
+  </div>
+  <div class="container" id="page2" style="display: none;">
+    <h1>Health Consultation - Page 2</h1>
+    <div id="symptomsSection">
+      <h2>Symptoms</h2>
+      <label><input type="checkbox" id="cough">Cough</label>
+      <label><input type="checkbox" id="colds">Colds</label>
+      <label><input type="checkbox" id="diarrhea">Diarrhea</label>
+      <label><input type="checkbox" id="fever">Fever</label>
+      <label><input type="checkbox" id="fatigue">Fatigue</label>
+      <label><input type="checkbox" id="dizziness">Dizziness</label>
+      <label><input type="checkbox" id="soreThroat">Sore Throat</label>
+      <label><input type="checkbox" id="nausea">Nausea</label>
+      <label><input type="checkbox" id="chills">Chills</label>
+    </div>
+    <button onclick="showPage3()">Next</button>
+  </div>
+
+  <div class="container" id="page3" style="display: none;">
+    <h1>Health Consultation - Page 3</h1>
+    <label for="hereditaryDisease">Do you have any hereditary disease?</label>
+    <select id="hereditaryDisease">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <div id="hereditaryOptions" style="display: none;">
+      <h2>Hereditary Disease</h2>
+      <label><input type="checkbox" id="asthma">Asthma</label>
+      <label><input type="checkbox" id="diabetes">Diabetes</label>
+      <label><input type="checkbox" id="anemia">Anemia</label>
+    </div>
+    <button onclick="showResult()">Proceed</button>
+  </div>
+
+  <div class="container" id="resultSection" style="display: none;">
+    <h1>Health Consultation - Result</h1>
+    <p id="resultMessage"></p>
+  </div>
+
+  <script>
+  function showPage2() {
+    const healthConcern = document.getElementById('healthConcern').value;
+    if (healthConcern === 'yes') {
+      document.getElementById('symptomsSection').style.display = 'block';
+    } else {
+      document.getElementById('symptomsSection').style.display = 'none';
+    }
+    document.getElementById('page1').style.display = 'none';
+    document.getElementById('page2').style.display = 'block';
+  }
+
+  function showPage3() {
+    const hereditaryDisease = document.getElementById('hereditaryDisease').value;
+    if (hereditaryDisease === 'yes') {
+      document.getElementById('hereditaryOptions').style.display = 'block';
+    } else {
+      // If hereditaryDisease is 'no', skip hereditary options and proceed to result
+      showResult();
+      return;
+    }
+    document.getElementById('page2').style.display = 'none';
+    document.getElementById('page3').style.display = 'block';
+  }
+
+  function showResult() {
+    const symptoms = getCheckedCheckboxes('symptomsSection');
+    const hereditaryDisease = document.getElementById('hereditaryDisease').value;
+    const hereditaryOptions = getCheckedCheckboxes('hereditaryOptions');
+    // Calculate the percentage of checked checkboxes on Page 2
+    const page2Checkboxes = document.querySelectorAll('#symptomsSection input[type="checkbox"]');
+    const page2Percentage = (symptoms.length / page2Checkboxes.length) * 100;
+
+    // Customize the result message based on user input
+    let resultMessage = 'Based on your input:\n\n';
+    resultMessage += `Symptoms: ${symptoms.join(', ')}\n`;
+    resultMessage += `Hereditary Disease: ${hereditaryDisease}\n`;
+    if (hereditaryDisease === 'yes') {
+      resultMessage += `Hereditary Options: ${hereditaryOptions.join(', ')}\n\n`;
+      // Calculate the percentage of checked checkboxes on Page 3
+      const page3Checkboxes = document.querySelectorAll('#hereditaryOptions input[type="checkbox"]');
+      const page3Percentage = (hereditaryOptions.length / page3Checkboxes.length) * 100;
+      resultMessage += `Percentage of hereditary options checked on Page 3: ${page3Percentage.toFixed(2)}%`;
+    } else {
+      resultMessage += '\n';
+    }
+
+    // Display the result
+    document.getElementById('resultMessage').innerText = resultMessage;
+    document.getElementById('page3').style.display = 'none';
+    document.getElementById('resultSection').style.display = 'block';
+  }
+
+  function resetForm() {
+    // Reset the form to its initial state
+    document.getElementById('page1').style.display = 'block';
+    document.getElementById('page2').style.display = 'none';
+    document.getElementById('page3').style.display = 'none';
+    document.getElementById('resultSection').style.display = 'none';
+
+    // Reset checkboxes on Page 2
+    const page2Checkboxes = document.querySelectorAll('#symptomsSection input[type="checkbox"]');
+    page2Checkboxes.forEach(checkbox => checkbox.checked = false);
+
+    // Reset checkboxes on Page 3
+    const page3Checkboxes = document.querySelectorAll('#hereditaryOptions input[type="checkbox"]');
+    page3Checkboxes.forEach(checkbox => checkbox.checked = false);
+
+    // Reset select dropdowns
+    document.getElementById('healthConcern').value = 'yes';
+    document.getElementById('hereditaryDisease').value = 'yes';
+
+    // Reset result message
+    document.getElementById('resultMessage').innerText = '';
+  }
+
+  function getCheckedCheckboxes(sectionId) {
+    const checkboxes = document.querySelectorAll(`#${sectionId} input[type="checkbox"]:checked`);
+    return Array.from(checkboxes).map(checkbox => checkbox.id);
+  }
+
+  let menu = document.querySelector('#menu-btn');
+  let navbar = document.querySelector('.navbar');
+
+  menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+  };
+
+  window.onscroll = () => {
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+  };
+</script>

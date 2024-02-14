@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HealthSnap - Alerts</title>
+    <link rel="icon" href="ADETLOGO2.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600&family=Roboto&display=swap');
+
+    :root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--darkest-teal);
+    --dark-teal:  #008080;
+    --darkest-teal: #003A51;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #BFD8C8;
+            margin: 0;
+            padding: 500;
+        }
+section {
+    padding: 2rem 9%;
+}
+        #alert-container {
+            width: 550px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 100px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 50px auto; /* Center the container */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="time"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        .heading {
+            text-align: center;
+            padding-bottom: 2rem;
+            text-shadow: var(--text-shadow);
+            text-transform: uppercase;
+            color: var(--black);
+            font-size: 5rem;
+            letter-spacing: .4rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+    }
+        .container .image img {
+        width: 100%;
+    }
+        .heading span {
+            text-transform: uppercase;
+            color: var(--dark-purple);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: .5rem;
+            padding-left: 1rem;
+            border: var(--border);
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            color: var(--black);
+            cursor: pointer;
+            font-size: 1.7rem;
+            background: linear-gradient(90deg, #008080, #FFFFFF);
+            text-decoration: none;
+        }
+
+        .btn span {
+            padding: 0.7rem 1rem;
+            border-radius:  .5rem;
+            background: var(--dark-teal);
+            color: #fff;
+            margin-left: 0.5rem;
+        }
+
+        .btn:hover {
+            background: var(--dark-teal);
+            color: #fff;
+        }
+
+        .btn:hover span {
+            color: var(--green);
+            background: #fff;
+            margin-left: 1rem;
+        }
+
+.header {
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #001F3F, #008080, #FFFFFF);
+
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    background: linear-gradient(90deg, #001F3F, #008080);
+  -webkit-background-clip: text;
+  color: transparent;
+ margin-left: 2rem;
+
+}
+
+.header .navbar a:hover {
+  color: yellow;
+}
+
+        #menu-btn {
+            font-size: 2.5rem;
+            border-radius: .5rem;
+            background: #eee;
+            color: var(--green);
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+
+/* media queries */
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+
+            .header {
+                padding: 2rem;
+            }
+        }
+@media (max-width: 768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: linear-gradient(90deg, #008080, #FFFFFF);
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a {
+        font-size: 1.7rem;
+        background: linear-gradient(90deg, #001F3F, #008080);
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-left: 2rem;
+        display: block;
+        padding: 1rem;
+    }
+
+    .header .navbar a:hover {
+        color: yellow;
+    }
+}
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+        }
+/*------------------------ALERTS CSS ---------------------------*/
+        #past-alerts {
+            margin-top: 20px;
+        }
+
+        #past-alerts h3 {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+        <a href="#" class="logo"> <image src="ADETLOGO.png"></i></a>
+
+        <nav class="navbar">
+            <a href="EX.html">Home</a>
+            <a href="EX.html">About Us</a>
+            <a href="EX.html">Account</a>
+            <a href="EX.html">Services</a>
+            <a href="EX.html">Developers</a>
+            <a href="EXF.html">Feedback</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+  <section>
+
+  <div class="container" id="page1">
+    <div class="image">
+      <img src="EA1.gif" alt="">
+    </div>
+<div id="alert-container">
+    <h2>HealthSnap - Patient Alerts</h2>
+    <form id="alert-form">
+        <label for="alert-time">Set Alert Time:</label>
+        <input type="time" id="alert-time" name="alert-time" required>
+
+        <label for="alert-note">Alert Note:</label>
+        <textarea id="alert-note" name="alert-note" rows="4" placeholder="Write a note for your alert..."></textarea>
+
+        <a href="#" class="btn" onclick="setAlert()">Set Alert <span class="fas fa-chevron-right"></span></a>
+    </form>
+
+    <div id="past-alerts">
+        <h3>Past Alerts</h3>
+        <ul id="alerts-list"></ul>
+    </div>
+</div>
+
+<script>
+    let menu = document.querySelector('#menu-btn');
+    let navbar = document.querySelector('.navbar');
+
+    menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+    }
+
+    window.onscroll = () => {
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+}
+
+
+    function setAlert() {
+        var alertTime = document.getElementById('alert-time').value;
+        var alertNote = document.getElementById('alert-note').value;
+
+        // Display alert message
+        alert("Alert set for " + alertTime);
+
+        // Store alert in the past alerts list
+        var alertsList = document.getElementById('alerts-list');
+        var listItem = document.createElement('li');
+        listItem.innerHTML = '<strong>Time:</strong> ' + alertTime + '<br><strong>Note:</strong> ' + alertNote;
+        alertsList.appendChild(listItem);
+
+        // Clear form fields
+        document.getElementById('alert-time').value = '';
+        document.getElementById('alert-note').value = '';
+    }
+
+    // JavaScript code to handle form submission
+    document.getElementById('alert-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Get user input values
+        var rating = document.querySelector('input[name="rating"]:checked').value;
+        var feedback = document.getElementById('feedback').value;
+
+        // Display a simple alert with the collected feedback
+        alert("Thank you! You rated your experience as " + rating + " stars.\nAdditional Feedback: " + feedback);
+    });
+</script>
+
+</body>
+</html>

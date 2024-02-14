@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSnap - Records</title>
+    <link rel="icon" href="ADETLOGO2.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!--header starts-->
+    <header class="header">
+        <a href="#" class="logo"> <img src="ADETLOGO.png" alt="Logo"></a>
+        <nav class="navbar">
+            <a href="EX.html">Home</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#book">Account</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Developers</a>
+            <a href="#review">Feedback</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <section>
+        <div class="image-section">
+            <img src="ER3.gif" alt="HealthSnap Image">
+        </div>
+        <form id="recordForm" class="record-form">
+            <h2 class="heading">ADD NEW RECORD <span>+</span></h2>
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" required><br> <br>
+            <label for="notes">Patient Notes:</label>
+            <textarea id="notes" name="notes" rows="1" required style="height: 16; width: 24;"></textarea>
+            <br>
+            <br>
+            <button type="submit" class="btn">Add Record </button>
+            <br>
+            <br>
+            <br>
+            <br>
+        <h2 class="heading">Past Records</h2>
+        <!-- Display past records here -->
+    </section>
+
+    <script>
+        document.getElementById('recordForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form data and send it to the server for processing
+            const formData = new FormData(event.target);
+            const patientName = formData.get('patientName');
+            const notes = formData.get('notes');
+
+            // Send the data to the server using fetch or other methods
+            fetch('/api/add-record', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    patientName,
+                    notes,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from the server, update the UI, etc.
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

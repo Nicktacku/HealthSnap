@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSnap - Records</title>
+    <link rel="icon" href="ADETLOGO2.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600&family=Roboto&display=swap');
+
+:root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--darkest-teal);
+    --dark-teal:  #008080;
+    --darkest-teal: #003A51;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: ;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+       background: var(--pink); 
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+.heading span {
+    text-transform: uppercase;
+    color: var(--darkest-teal);
+}
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: linear-gradient(90deg, #008080, #FFFFFF);
+}
+.btn span {
+    padding: 0.7rem 1rem;
+    border-radius:  .5rem;
+    background: var(--dark-teal);
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+.btn:hover {
+    background: var(--dark-teal);
+    color: #fff;
+}
+
+.btn:hover span {
+    color: var(--green);
+    background: #fff;
+    margin-left: 1rem;
+
+}
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  text-shadow: var(--text-shadow);
+  text-transform: uppercase;
+  color: var(--black);
+  font-size: 5rem;
+  letter-spacing: .4rem;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: var(--green);
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  border: var(--border);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--black);
+  cursor: pointer;
+  font-size: 1.7rem;
+  background: #fff;
+}
+.btn span {
+  padding: 0.7rem 1rem;
+  border-radius:  .5rem;
+  background: var(--dark-teal);
+  color: #fff;
+  margin-left: 0.5rem;
+}
+
+.btn:hover {
+  background: var(--dark-teal);
+  color: #fff;
+}
+
+.btn:hover span {
+  color: var(--dark-teal);
+  background: #fff;
+  margin-left: 1rem;
+}
+
+.header {
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #001F3F, #008080, #FFFFFF);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    background: linear-gradient(90deg, #001F3F, #008080);
+  -webkit-background-clip: text;
+   color: transparent;
+   margin-left: 2rem;
+
+}
+
+.header .navbar a:hover {
+  color: yellow;
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #BFD8C8;
+      margin: 0;
+      padding: 500;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 60px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+/* RECORDS CSS*/
+section {
+            display: flex;
+            justify-content: space-between;
+            padding: 10rem 10rem;
+            max-width: 1000px;
+            margin: 0;
+            background-color: #BFD8C8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            color: #000;
+        }
+        section .records-section{
+            padding: 10rem 10rem;
+        }
+
+        .image-section,
+        .record-form,
+        .records-section {
+            flex: 1;
+            max-width: 100%;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .record-form {
+            text-align: left;
+            padding-left: 2rem;
+        }
+        /* media queries */
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+        @media (max-width: 768px) {
+            #menu-btn {
+                display: initial;
+            }
+
+            .header .navbar {
+                position: absolute;
+                top: 115%; right: 2rem;
+                border-radius: .5rem;
+                box-shadow: var(--box-shadow);
+                width: 30rem;
+                border: var(--border);
+                background: linear-gradient(90deg, #008080, #FFFFFF);
+                transform: scale(0);
+                opacity: 0;
+                transform-origin: top right;
+                transition: none;
+            }
+
+            .header .navbar.active {
+                transform: scale(1);
+                opacity: 1;
+                transition: .2s ease-out;
+
+            }
+
+            .header .navbar a {
+                font-size: 2rem;
+                display: block;
+                margin: 2.5rem;
+
+            }
+        }
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+        }/* media queries */
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+
+            .header {
+                padding: 2rem;
+            }
+        }
+@media (max-width: 768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: linear-gradient(90deg, #008080, #FFFFFF);
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a {
+        font-size: 1.7rem;
+        background: linear-gradient(90deg, #001F3F, #008080);
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-left: 2rem;
+        display: block;
+        padding: 1rem;
+    }
+
+    .header .navbar a:hover {
+        color: yellow;
+    }
+}
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--header starts-->
+    <header class="header">
+        <a href="#" class="logo"> <img src="ADETLOGO.png" alt="Logo"></a>
+        <nav class="navbar">
+            <a href="EX.html">Home</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#book">Account</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Developers</a>
+            <a href="#review">Feedback</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <section>
+        <div class="image-section">
+            <img src="ER3.gif" alt="HealthSnap Image">
+        </div>
+        <form id="recordForm" class="record-form">
+            <h2 class="heading">ADD NEW RECORD <span>+</span></h2>
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" required><br> <br>
+            <label for="notes">Patient Notes:</label>
+            <textarea id="notes" name="notes" rows="1" required style="height: 16; width: 24;"></textarea>
+            <br>
+            <br>
+            <button type="submit" class="btn">Add Record </button>
+            <br>
+            <br>
+            <br>
+            <br>
+        <h2 class="heading">Past Records</h2>
+        <!-- Display past records here -->
+    </section>
+
+    <script>
+        document.getElementById('recordForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form data and send it to the server for processing
+            const formData = new FormData(event.target);
+            const patientName = formData.get('patientName');
+            const notes = formData.get('notes');
+
+            // Send the data to the server using fetch or other methods
+            fetch('/api/add-record', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    patientName,
+                    notes,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from the server, update the UI, etc.
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
