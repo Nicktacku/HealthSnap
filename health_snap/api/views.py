@@ -9,7 +9,9 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .serializers import UserSerializer
+from .serializers import UserSerializer, RecordSerializer, FeedbackSerializer
+
+from .models import Record, Feedback
 
 
 from django.contrib.auth.models import User
@@ -39,7 +41,11 @@ def register(request):
     serializer = UserSerializer(data=request.data)
 
     if serializer.is_valid():
-        user = User.objects.create_user(serializer.data["password"], serializer.data["email"])
+        user = User.objects.create_user(
+            serializer.data["username"],
+            serializer.data["email"],
+            serializer.data["password"],
+            )
         user.first_name = serializer.data["first_name"]
         user.last_name = serializer.data["last_name"]
         user.save()
@@ -54,9 +60,46 @@ def getUsers(request):
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
 
+@api_view(["GET"])
+def getRecords(request):
+    records = Record.objects.all()
+    serializer = RecordSerializer(records, many=True)
+    return Response(serializer.data)
+
+@api_view(["POST"])
+def giveRecord(request):
+    print(request.data)
+
+    serializer = RecordSerializer(data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        print("saved")
+        return Response(serializer.data)
+    print("didnot save", serializer.data)
+    return Response(serializer.data)
+
+@api_view(["GET"])
+def getFeedbacks(request):
+    feedbacks = Feedback.objects.all()
+    serializer = FeedbackSerializer(feedbacks, many=True)
+    return Response(serializer.data)
+
+@api_view(["POST"])
+def giveFeedback(request):
+    print(request.data)
+
+    serializer = FeedbackSerializer(data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        print("saved")
+        return Response(serializer.data)
+    print("didnot save", serializer.data)
+    return Response(serializer.data)
+
 @api_view(["POST"])
 def symptom_checker(request):
-    print("REQUEST DATA ", request.data["symptoms"])
     states = ["no sickness", "common cold", "influenza", "Acute Bronchitis", "tonsillopharyngitis", "chickenpox"]
     inputs = ["u1", "u2", "u3",
             "u4", "u5", "u6",

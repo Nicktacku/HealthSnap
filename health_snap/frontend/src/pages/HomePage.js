@@ -147,6 +147,10 @@ const HomePage = () => {
                 icon={faChevronRight}
               />{" "}
             </Link>
+            <Link to="/Record">
+              {" "}
+              got to record <FontAwesomeIcon icon={faChevronRight} />{" "}
+            </Link>
           </div>
         </div>
       </section>

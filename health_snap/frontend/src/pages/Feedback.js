@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/feedback.css";
 import { Link } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
 const Feedback = () => {
   const rating = [1, 2, 3, 4, 5];
@@ -12,7 +13,6 @@ const Feedback = () => {
     setRate(e.target.alt);
     setClicked(true);
   };
-
   const setStar = (e) => {
     console.log(e.target.alt);
     setRate(e.target.alt);
@@ -24,9 +24,39 @@ const Feedback = () => {
     }
   };
 
+  let getFeedbacks = async () => {
+    let response = await fetch("http://127.0.0.1:8000/feedbacks/");
+
+    let data = await response.json();
+
+    console.log("this is my name", data[0].patient_name);
+  };
+
+  let [user, setUser] = useState(() =>
+    localStorage.getItem("authTokens")
+      ? jwtDecode(localStorage.getItem("authTokens"))
+      : null
+  );
+
+  let giveFeedback = async (e) => {
+    e.preventDefault();
+
+    let response = await fetch("http://127.0.0.1:8000/feedbacks/give", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        user_id: user.user_id,
+        stars: rate,
+        feedback: e.target.feedback.value,
+      }),
+    });
+  };
+
   return (
     <div class="feedback-container">
-      <form id="feedbackForm">
+      <form id="feedbackForm" onSubmit={giveFeedback}>
         <div class="container" id="page1">
           <div class="image">
             <img src={require("../assets/SF1.gif")} alt="" />
@@ -65,9 +95,9 @@ const Feedback = () => {
         <br />
         <br />
 
-        <Link to="/" className="btn">
+        <button type="submit" class="btn">
           Submit
-        </Link>
+        </button>
       </form>
     </div>
   );

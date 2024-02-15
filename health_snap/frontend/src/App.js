@@ -13,8 +13,9 @@ import HomePage from "./pages/HomePage";
 import Consultation from "./pages/Consultation";
 import Feedback from "./pages/Feedback";
 import LoginPage from "./pages/LoginPage";
+import Record from "./pages/Record";
 import PrivateRoute from "./utils/PrivateRoute";
-import AuthContext from "./context/AuthContext";
+import RegisterPage from "./pages/RegisterPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,9 +24,11 @@ const router = createBrowserRouter(
       <Route element={<PrivateRoute />}>
         <Route path="/Consultation" element={<Consultation />} />
         <Route path="/Feedback" element={<Feedback />} />
+        <Route path="/Record" element={<Record />} />
       </Route>
 
       <Route path="/Login" element={<LoginPage />} />
+      <Route path="/Register" element={<RegisterPage />} />
     </Route>
   )
 );
