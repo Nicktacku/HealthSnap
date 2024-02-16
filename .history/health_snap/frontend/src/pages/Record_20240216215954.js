@@ -74,7 +74,7 @@ const Records = () => {
       {records.map((record) => {
         return (
           <div class="box" style={{ height: "500px" }}>
-            <h3>{record.patient_name}</h3>
+            <h3>Feedback</h3>
 
             <p class="text truncate-height">
               <br></br>

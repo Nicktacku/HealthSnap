@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
@@ -31,11 +31,6 @@ const RegisterPage = () => {
   };
   return (
     <div>
-      {error && (
-        <div class="alert alert-danger" role="alert">
-          A simple danger alert—check it out!
-        </div>
-      )}
       <form onSubmit={Register}>
         <input
           type="text"

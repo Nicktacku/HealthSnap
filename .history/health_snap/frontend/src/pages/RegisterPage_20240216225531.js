@@ -1,11 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
-  let [error, setError] = useState(false);
-
   let Register = async (e) => {
     e.preventDefault();
 
@@ -21,21 +19,14 @@ const RegisterPage = () => {
         email: e.target.email.value,
         password: e.target.password.value,
       }),
-    });
-    console.log(response.status);
-    if (response.status === 500) {
-      setError(true);
-    }
 
-    // navigate("/");
+      console.log(response)
+    });
+
+    navigate("/");
   };
   return (
     <div>
-      {error && (
-        <div class="alert alert-danger" role="alert">
-          A simple danger alert—check it out!
-        </div>
-      )}
       <form onSubmit={Register}>
         <input
           type="text"

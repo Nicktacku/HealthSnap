@@ -51,6 +51,7 @@ export const AuthProvider = ({ children }) => {
       <NavLink to="/" />;
       setNavigate(true);
     } else {
+      <p>Gekki</p>;
       alert("Wrong username or password");
     }
   };

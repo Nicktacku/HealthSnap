@@ -74,11 +74,12 @@ const Records = () => {
       {records.map((record) => {
         return (
           <div class="box" style={{ height: "500px" }}>
-            <h3>{record.patient_name}</h3>
+            <img src="Images/S3.gif" alt="" />
+            <h3>Feedback</h3>
 
             <p class="text truncate-height">
               <br></br>
-              {record.patient_notes}
+              hello
             </p>
           </div>
         );

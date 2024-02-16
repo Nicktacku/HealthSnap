@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../css/feedback.css";
 import { jwtDecode } from "jwt-decode";
 
 const Records = () => {
-  let [records, setRecords] = useState([]);
-
   let getRecords = async () => {
     let response = await fetch("http://127.0.0.1:8000/records/");
 
     let data = await response.json();
 
     console.log("this is my name", data[0].patient_name);
-    setRecords(data);
   };
 
   let [user, setUser] = useState(() =>
@@ -37,9 +34,7 @@ const Records = () => {
   };
 
   console.log("user: ", user.user_id);
-  useEffect(() => {
-    getRecords();
-  }, []);
+  getRecords();
   return (
     <>
       <div class="image-section">
@@ -71,18 +66,6 @@ const Records = () => {
       <br />
       <br />
       <h2 class="heading">Past Records</h2>
-      {records.map((record) => {
-        return (
-          <div class="box" style={{ height: "500px" }}>
-            <h3>{record.patient_name}</h3>
-
-            <p class="text truncate-height">
-              <br></br>
-              {record.patient_notes}
-            </p>
-          </div>
-        );
-      })}
 
       <br />
     </>

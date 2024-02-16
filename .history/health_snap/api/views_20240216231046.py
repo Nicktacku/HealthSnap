@@ -49,13 +49,10 @@ def register(request):
         user.first_name = serializer.data["first_name"]
         user.last_name = serializer.data["last_name"]
         user.save()
-        users = User.objects.all()
-        serializer = UserSerializer(users, many=True)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     users = User.objects.all()
     serializer = UserSerializer(users, many=True)
-    return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+    return Response(serializer.data, status=status=status.HTTP_201_CREATED)
 
 @api_view(["GET"])
 def getUsers(request):

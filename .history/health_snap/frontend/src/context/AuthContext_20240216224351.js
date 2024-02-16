@@ -51,7 +51,8 @@ export const AuthProvider = ({ children }) => {
       <NavLink to="/" />;
       setNavigate(true);
     } else {
-      alert("Wrong username or password");
+      console.log("Something Went Wrong");
+      alert("I am an alert box!");
     }
   };
 

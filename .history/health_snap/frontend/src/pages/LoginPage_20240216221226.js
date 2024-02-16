@@ -1,13 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import { NavLink } from "react-router-dom";
 import RegisterPage from "./RegisterPage";
 
 const LoginPage = () => {
   let { LoginUser, user } = useContext(AuthContext);
-  useEffect(() => {
-    console.log("gumana");
-  }, [LoginUser]);
 
   return (
     <div>
@@ -18,7 +15,6 @@ const LoginPage = () => {
           <input type="submit" />
         </form>
       )}
-      <br />
       <RegisterPage />
     </div>
   );

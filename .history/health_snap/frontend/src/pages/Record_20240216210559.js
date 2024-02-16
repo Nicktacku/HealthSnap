@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../css/feedback.css";
 import { jwtDecode } from "jwt-decode";
 
@@ -37,9 +37,7 @@ const Records = () => {
   };
 
   console.log("user: ", user.user_id);
-  useEffect(() => {
-    getRecords();
-  }, []);
+  getRecords();
   return (
     <>
       <div class="image-section">
@@ -74,7 +72,8 @@ const Records = () => {
       {records.map((record) => {
         return (
           <div class="box" style={{ height: "500px" }}>
-            <h3>{record.patient_name}</h3>
+            <img src="Images/S3.gif" alt="" />
+            <h3>Feedback</h3>
 
             <p class="text truncate-height">
               <br></br>

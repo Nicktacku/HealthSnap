@@ -7,7 +7,7 @@ const LoginPage = () => {
   let { LoginUser, user } = useContext(AuthContext);
   useEffect(() => {
     console.log("gumana");
-  }, [LoginUser]);
+  }, [user]);
 
   return (
     <div>
