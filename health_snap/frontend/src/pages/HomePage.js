@@ -267,13 +267,14 @@ const HomePage = () => {
         <h1 class="heading">
           {" "}
           CLIENT'S <span>FEEDBACK</span>{" "}
+          <br></br>
           <Link to="/Feedback" class="btn">
             ADD FEEDBACK <FontAwesomeIcon icon={faPlus} />
           </Link>
         </h1>
 
         <div
-          className="box-container overflow-auto"
+          className="box-container overflow-auto box-feedback"
           style={{ height: "500px", width: "1100px" }}
         >
           {feedbacks.map((feedback) => {

@@ -384,6 +384,10 @@ section:nth-child(even) {
     gap:2rem;
 }
 
+.box-feedback {
+    margin: auto;
+}
+
 .review .box-container .box {
     border: var(--border);
     box-shadow: var(--box-shadow);
