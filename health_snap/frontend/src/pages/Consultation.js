@@ -300,12 +300,12 @@ function Consultation() {
         )}
       </div>
 
-      <div className="container" id="page3" style={{ display: `${page3}`, padding: '30px 30px 150px 20px'}}>
-        <h1 style={{ marginLeft: "90px", marginTop: "40px" }}>
+      <div className="container" id="page3" style={{ display: `${page3}`, padding: '30px 30px 150px 20px', fontSize: "17px"}}>
+        <h1 style={{ marginLeft: "68px", marginTop: "40px", fontSize: "28px"}}>
           HEALTH CONSULTATION RESULT
         </h1>
-        <ul className="list" style={{ marginLeft: "20px" }}>
-          <h2 style={{ marginTop: "35px" }}>
+        <ul className="list" style={{ marginLeft: "20px"}}>
+          <h2 style={{ marginTop: "35px", }}>
             Based on your input, it is possible that you have:
           </h2>
           {Object.keys(datas).map((data) => (
