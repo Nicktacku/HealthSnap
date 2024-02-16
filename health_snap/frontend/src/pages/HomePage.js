@@ -406,7 +406,7 @@ const HomePage = () => {
             </a>
             <a href="#">
               {" "}
-              <FontAwesomeIcon icon={faChevronRight} /> 621-7098
+              <FontAwesomeIcon icon={faChevronRight} /> (7) 621-7098
             </a>
             <a href="#">
               {" "}
@@ -437,7 +437,7 @@ const HomePage = () => {
 
         <div class="credit">
           {" "}
-          Created by <span>SYMPTOMATA TEAM</span> | @2024 All Rights Reserved
+          Produced by <span>HealthSnap TEAM</span> | @2024 All Rights Reserved
         </div>
       </section>
     </div>
