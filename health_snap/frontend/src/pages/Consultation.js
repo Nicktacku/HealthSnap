@@ -305,7 +305,7 @@ function Consultation() {
           HEALTH CONSULTATION RESULT
         </h1>
         <ul className="list" style={{ marginLeft: "20px" }}>
-          <h2 style={{ marginTop: "20px" }}>
+          <h2 style={{ marginTop: "35px" }}>
             Based on your input, it is possible that you have:
           </h2>
           {Object.keys(datas).map((data) => (
