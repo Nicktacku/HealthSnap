@@ -300,7 +300,7 @@ function Consultation() {
         )}
       </div>
 
-      <div className="container" id="page3" style={{ display: `${page3}`, padding: '30px 30px 150px 20px', fontSize: "17px"}}>
+      <div className="container" id="page3" style={{ display: `${page3}`, padding: '30px 30px 150px 20px', fontSize: "17px", marginTop: "165px"}}>
         <h1 style={{ marginLeft: "68px", marginTop: "40px", fontSize: "28px"}}>
           HEALTH CONSULTATION RESULT
         </h1>
