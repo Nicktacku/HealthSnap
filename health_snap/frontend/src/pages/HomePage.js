@@ -189,13 +189,13 @@ const HomePage = () => {
             <h3>ELAINE</h3>
             <span>UI / Frontend Developer</span>
             <div class="share">
-              <a href="https://www.facebook.com/Ms.MatchaLatte">
+              <a href="https://www.facebook.com/Ms.MatchaLatte" target="_blank">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="https://twitter.com/enzo_and_elaine">
+              <a href="https://twitter.com/enzo_and_elaine" target="_blank">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="https://www.instagram.com/enzoandelaineofficial">
+              <a href="https://www.instagram.com/enzoandelaineofficial" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -206,13 +206,13 @@ const HomePage = () => {
             <h3>SOPHIA</h3>
             <span>Frontend Developer</span>
             <div class="share">
-              <a href="https://www.facebook.com/thesophiareyes">
+              <a href="https://www.facebook.com/thesophiareyes" target="_blank">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="https://twitter.com/thesophiareyes">
+              <a href="https://twitter.com/thesophiareyes" target="_blank">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="https://www.instagram.com/smfreyes/?">
+              <a href="https://www.instagram.com/smfreyes/?" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -223,13 +223,13 @@ const HomePage = () => {
             <h3>JINO</h3>
             <span>React.js/Frontend Developer</span>
             <div class="share">
-              <a href="https://www.facebook.com/jino.llamadoo">
+              <a href="https://www.facebook.com/jino.llamadoo" target="_blank">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="https://twitter.com/Taaaalooon">
+              <a href="https://twitter.com/Taaaalooon" target="_blank">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="https://www.instagram.com/nijllmd/">
+              <a href="https://www.instagram.com/nijllmd/" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -241,13 +241,13 @@ const HomePage = () => {
             <span>React.js / NFA 
             Algorithm / Backend Developer </span>
             <div class="share">
-              <a href="https://www.facebook.com/nick.salvada">
+              <a href="https://www.facebook.com/nick.salvada" target="_blank">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="https://twitter.com/aNazyN8?t=lZ5Msc3NRQu6AvQ_omaEdQ&s=09&fbclid=IwAR3sIBExEQ1SytGTa0wwz3rzqI_nY6XsuzsKZOce7so_7Cu3w5WtcQxQSqQ">
+              <a href="https://twitter.com/aNazyN8?t=lZ5Msc3NRQu6AvQ_omaEdQ&s=09&fbclid=IwAR3sIBExEQ1SytGTa0wwz3rzqI_nY6XsuzsKZOce7so_7Cu3w5WtcQxQSqQ" target="_blank">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="https://www.instagram.com/nicktacku07/">
+              <a href="https://www.instagram.com/nicktacku07/" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
