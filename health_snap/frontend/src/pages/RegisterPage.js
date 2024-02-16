@@ -50,7 +50,13 @@ const RegisterPage = () => {
           placeholder="Enter Username"
           class ="boxEnterUsername"
         />
-        <input type="email" name="email" id="email" placeholder="Enter Email" class ="boxEnterUsername"/>
+        <input 
+          type="email" 
+          name="email" 
+          id="email" 
+          placeholder="Enter Email" 
+          class ="boxEnterUsername"
+          />
         
         <input
           type="text"
