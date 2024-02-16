@@ -395,6 +395,9 @@ const HomePage = () => {
             <a href="#services">
               {" "}
               <FontAwesomeIcon icon={faChevronRight} /> Consult
+             <br></br>
+             <br></br>
+              <FontAwesomeIcon icon={faChevronRight} /> Records
             </a>
           </div>
 
@@ -420,15 +423,15 @@ const HomePage = () => {
 
           <div class="box">
             <h3>Follow US</h3>
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=61556129057135" target="_blank">
               {" "}
               <FontAwesomeIcon icon={faFacebookF} /> Facebook
             </a>
-            <a href="#">
+            <a href="https://twitter.com/Taaaalooon" target="_blank">
               {" "}
               <FontAwesomeIcon icon={faTwitter} /> Twitter
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/healtsnap" target="_blank">
               {" "}
               <FontAwesomeIcon icon={faInstagram} /> Instagram
             </a>
