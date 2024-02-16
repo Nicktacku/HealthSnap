@@ -187,15 +187,15 @@ const HomePage = () => {
           <div class="box">
             <img src="Images/E.png" alt="" />
             <h3>ELAINE</h3>
-            <span>UI/FRONT END DEVELOPER</span>
+            <span>UI / Frontend Developer</span>
             <div class="share">
               <a href="https://www.facebook.com/Ms.MatchaLatte">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="#">
+              <a href="https://twitter.com/enzo_and_elaine">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/enzoandelaineofficial">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -204,15 +204,15 @@ const HomePage = () => {
           <div class="box">
             <img src="Images/S.png" alt="" />
             <h3>SOPHIA</h3>
-            <span>FRONT END DEVELOPER</span>
+            <span>Frontend Developer</span>
             <div class="share">
               <a href="https://www.facebook.com/thesophiareyes">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="#">
+              <a href="https://twitter.com/thesophiareyes">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/smfreyes/?">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -221,15 +221,15 @@ const HomePage = () => {
           <div class="box">
             <img src="Images/J.png" alt="" />
             <h3>JINO</h3>
-            <span>React.js/FRONT END DEVELOPER</span>
+            <span>React.js/Frontend Developer</span>
             <div class="share">
               <a href="https://www.facebook.com/jino.llamadoo">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="#">
+              <a href="https://twitter.com/Taaaalooon">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/nijllmd/">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -238,15 +238,16 @@ const HomePage = () => {
           <div class="box">
             <img src="Images/N.png" alt="" />
             <h3>NICHO</h3>
-            <span>ALGORITHM/BACK END DEVELOPER</span>
+            <span>React.js / NFA 
+            Algorithm / Backend Developer </span>
             <div class="share">
               <a href="https://www.facebook.com/nick.salvada">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="#">
+              <a href="https://twitter.com/aNazyN8?t=lZ5Msc3NRQu6AvQ_omaEdQ&s=09&fbclid=IwAR3sIBExEQ1SytGTa0wwz3rzqI_nY6XsuzsKZOce7so_7Cu3w5WtcQxQSqQ">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/nicktacku07/">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
