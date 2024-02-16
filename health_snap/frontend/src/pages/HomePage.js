@@ -247,7 +247,7 @@ const HomePage = () => {
               <a href="https://twitter.com/aNazyN8?t=lZ5Msc3NRQu6AvQ_omaEdQ&s=09&fbclid=IwAR3sIBExEQ1SytGTa0wwz3rzqI_nY6XsuzsKZOce7so_7Cu3w5WtcQxQSqQ" target="_blank">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="https://www.instagram.com/nicktacku07/" target="_blank">
+              <a href="https://www.instagram.com/nicktacku07/" target="_blank" >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
