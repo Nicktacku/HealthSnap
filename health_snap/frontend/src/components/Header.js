@@ -43,7 +43,7 @@ const Header = () => {
             <a href="#review">Feedback</a>
 
             {user ? (
-              <p onClick={logoutUser}>Logout</p>
+              <a href="#" onClick={logoutUser}> Logout</a>
             ) : (
               <NavLink to="/login">Login</NavLink>
             )}
