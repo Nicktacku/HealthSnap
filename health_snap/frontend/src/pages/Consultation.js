@@ -301,7 +301,7 @@ function Consultation() {
       </div>
 
       <div className="container" id="page3" style={{ display: `${page3}` }}>
-        <h1 style={{ marginLeft: "140px", marginTop: "20px" }}>
+        <h1 style={{ marginLeft: "90px", marginTop: "20px" }}>
           HEALTH CONSULTATION RESULT
         </h1>
         <ul className="list" style={{ marginLeft: "20px" }}>
