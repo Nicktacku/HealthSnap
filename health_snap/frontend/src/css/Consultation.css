@@ -191,7 +191,7 @@ section:nth-child(even) {
     }
 
     .container {
-      max-width: 600px;
+      width: 600px;
       margin: 20px auto;
       background-color: #fff;
       padding: 20px;

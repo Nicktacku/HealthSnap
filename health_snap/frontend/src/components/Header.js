@@ -43,7 +43,7 @@ const Header = () => {
             <a href="#review">Feedback</a>
 
             {user ? (
-              <a href="#" onClick={logoutUser}> Logout</a>
+              <a href="#" style={{color: "#ff55b0"}} onClick={logoutUser}> Logout</a>
             ) : (
               <NavLink to="/login">Login</NavLink>
             )}

@@ -51,7 +51,7 @@ function Consultation() {
 
   return (
     <div>
-      <div className="container" id="page1" style={{ display: `${page1}` }}>
+      <div className="container" id="page1" style={{ display: `${page1}`}}>
         <div className="image">
           <img src={require("../assets/S1.gif")} alt="" />
         </div>
@@ -300,8 +300,8 @@ function Consultation() {
         )}
       </div>
 
-      <div className="container" id="page3" style={{ display: `${page3}` }}>
-        <h1 style={{ marginLeft: "90px", marginTop: "20px" }}>
+      <div className="container" id="page3" style={{ display: `${page3}`, padding: '30px 30px 150px 20px'}}>
+        <h1 style={{ marginLeft: "90px", marginTop: "40px" }}>
           HEALTH CONSULTATION RESULT
         </h1>
         <ul className="list" style={{ marginLeft: "20px" }}>
