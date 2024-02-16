@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
-import "../css/App.css";
-import GIFSignup from "../assets/E4.gif";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -41,37 +39,30 @@ const RegisterPage = () => {
         </div>
       )}
       <form onSubmit={Register}>
-      <img src={GIFSignup} alt="GIF for Signup Page"/>
-      <h2>Sign-Up</h2>
         <input
           type="text"
           name="username"
           id="username"
           placeholder="Enter Username"
-          class ="boxEnterUsername"
         />
-        <input type="email" name="email" id="email" placeholder="Enter Email" class ="boxEnterUsername"/>
-        
+        <input type="email" name="email" id="email" placeholder="Enter Email" />
         <input
           type="text"
           name="first name"
           id="first_name"
-          placeholder="Enter First Name"
-          class ="boxEnterUsername"
+          placeholder="Enter first name"
         />
         <input
           type="text"
           name="last name"
           id="last_name"
-          placeholder="Enter Last Name"
-          class ="boxEnterUsername"
+          placeholder="Enter last name"
         />
         <input
           type="password"
           name="password"
           id="password"
           placeholder="Enter Password"
-          class ="boxEnterUsername"
         />
         <input type="submit" />
       </form>

@@ -288,33 +288,24 @@ const HomePage = () => {
               <div class="box" style={{ height: "500px" }}>
                 <img src="Images/S3.gif" alt="" />
                 <h3>Feedback</h3>
-                {timesArray.map((index) =>
-                  feedback.stars > index ? (
-                    <img
-                      key={index}
-                      src={require("../assets/star1.png")}
-                      style={{
-                        border: "0",
-                        borderRadius: "0",
-                        height: "25px",
-                        width: "25px",
-                      }}
-                      alt={`star-${index}`}
-                    />
-                  ) : (
-                    <img
-                      key={index}
-                      src={require("../assets/star0.png")}
-                      style={{
-                        border: "0",
-                        borderRadius: "0",
-                        height: "25px",
-                        width: "25px",
-                      }}
-                      alt={`star-${index}`}
-                    />
-                  )
-                )}
+                {timesArray.map((index) => (
+                  {feedback.stars > index ? <img
+                    src={require("../assets/star1.png")}
+                    style={{
+                      border: "0",
+                      borderRadius: "0",
+                      height: "25px",
+                      width: "25px",
+                    }}: <img
+                    src={require("../assets/star0.png")}
+                    style={{
+                      border: "0",
+                      borderRadius: "0",
+                      height: "25px",
+                      width: "25px",
+                    }}}
+                  />
+                ))}
 
                 <p class="text truncate-height">
                   <br></br>

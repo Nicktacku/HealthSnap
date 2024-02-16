@@ -54,7 +54,7 @@ const Feedback = () => {
       }),
     });
 
-    navigate("/");
+    navigate("/#review");
   };
 
   return (

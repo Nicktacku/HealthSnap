@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "../css/feedback.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, navigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 
 const Feedback = () => {
   const rating = [1, 2, 3, 4, 5];
   const [rate, setRate] = useState(0);
   const [clicked, setClicked] = useState(false);
-  const navigate = useNavigate();
 
   const clickedStar = (e) => {
     console.log(e.target.alt);

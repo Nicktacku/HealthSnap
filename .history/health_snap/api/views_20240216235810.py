@@ -1,6 +1,5 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework import status
 
 from django.http import JsonResponse
 from rest_framework.response import Response
@@ -41,7 +40,7 @@ def getUsers(request):
 def register(request):
     serializer = UserSerializer(data=request.data)
 
-    if serializer.is_valid() and len(serializer.data["password"]) >= 4:
+    if serializer.is_valid():
         user = User.objects.create_user(
             serializer.data["username"],
             serializer.data["email"],
@@ -49,9 +48,8 @@ def register(request):
             )
         user.first_name = serializer.data["first_name"]
         user.last_name = serializer.data["last_name"]
-
         user.save()
-
+        
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
