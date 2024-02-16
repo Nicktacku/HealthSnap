@@ -158,7 +158,7 @@ const HomePage = () => {
             </p>
             <Link to="/Consultation" class="btn">
               {" "}
-              Go to consult <FontAwesomeIcon icon={faChevronRight} />{" "}
+              Go to Consult <FontAwesomeIcon icon={faChevronRight} />{" "}
             </Link>
           </div>
 
@@ -168,7 +168,7 @@ const HomePage = () => {
             <p>You can access your medical records here that you provided.</p>
             <Link to="/Record" class="btn">
               {" "}
-              got to record <FontAwesomeIcon icon={faChevronRight} />{" "}
+              Go to Records <FontAwesomeIcon icon={faChevronRight} />{" "}
             </Link>
           </div>
         </div>
