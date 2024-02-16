@@ -18,6 +18,7 @@ import {
 
 const HomePage = () => {
   let [feedbacks, setFeedbacks] = useState([]);
+  let [refresh, setRefresh] = useState(false);
 
   let getFeedbacks = async () => {
     let response = await fetch("http://127.0.0.1:8000/feedbacks/");
@@ -27,13 +28,12 @@ const HomePage = () => {
     console.log("this is my name", data[0].stars);
 
     setFeedbacks(data);
+    setRefresh(true);
   };
 
   useEffect(() => {
     getFeedbacks();
-  }, []);
-
-  const timesArray = Array.from({ length: 5 }, (_, index) => index);
+  }, [refresh]);
 
   return (
     <div>
@@ -288,33 +288,6 @@ const HomePage = () => {
               <div class="box" style={{ height: "500px" }}>
                 <img src="Images/S3.gif" alt="" />
                 <h3>Feedback</h3>
-                {timesArray.map((index) =>
-                  feedback.stars > index ? (
-                    <img
-                      key={index}
-                      src={require("../assets/star1.png")}
-                      style={{
-                        border: "0",
-                        borderRadius: "0",
-                        height: "25px",
-                        width: "25px",
-                      }}
-                      alt={`star-${index}`}
-                    />
-                  ) : (
-                    <img
-                      key={index}
-                      src={require("../assets/star0.png")}
-                      style={{
-                        border: "0",
-                        borderRadius: "0",
-                        height: "25px",
-                        width: "25px",
-                      }}
-                      alt={`star-${index}`}
-                    />
-                  )
-                )}
 
                 <p class="text truncate-height">
                   <br></br>

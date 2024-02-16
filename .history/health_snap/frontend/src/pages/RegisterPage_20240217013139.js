@@ -29,13 +29,13 @@ const RegisterPage = () => {
       setError(false);
     }
 
-    navigate("/");
+    // navigate("/");
   };
   return (
     <div>
       {error && (
         <div class="alert alert-danger" role="alert">
-          Enter longer password
+          A simple danger alert—check it out!
         </div>
       )}
       <form onSubmit={Register}>

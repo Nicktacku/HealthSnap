@@ -35,9 +35,6 @@ const Records = () => {
         patient_notes: e.target.notes.value,
       }),
     });
-    e.target.patientName.value = "";
-    e.target.notes.value = "";
-
     setRefresh(true);
   };
 

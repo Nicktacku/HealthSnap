@@ -25,17 +25,15 @@ const RegisterPage = () => {
     console.log(response.status);
     if (response.status === 400) {
       setError(true);
-    } else if (response.status === 201) {
-      setError(false);
     }
 
-    navigate("/");
+    // navigate("/");
   };
   return (
     <div>
       {error && (
         <div class="alert alert-danger" role="alert">
-          Enter longer password
+          A simple danger alert—check it out!
         </div>
       )}
       <form onSubmit={Register}>

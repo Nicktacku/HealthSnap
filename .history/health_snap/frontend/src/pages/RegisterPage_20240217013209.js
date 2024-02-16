@@ -29,7 +29,7 @@ const RegisterPage = () => {
       setError(false);
     }
 
-    navigate("/");
+    // navigate("/");
   };
   return (
     <div>
