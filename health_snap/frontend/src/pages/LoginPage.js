@@ -17,7 +17,7 @@ const LoginPage = () => {
         <form onSubmit={LoginUser}  style={{margin: "auto"}}>
           <img src={GIFLogin} alt="GIF for Login Page" style= {{width:"450px", margin:"auto"}}/>
           <br/>
-          <h2>Log-In</h2>
+          <h2>Login</h2>
           <input type="text" name="username" placeholder="Enter Username" style={{ width: "500px", fontSize: "20px", padding: "10px", border: '2px solid black'}}/>
           <br></br>
           <input type="password" name="password" placeholder="Enter Password" class ="boxEnterPassword" />
