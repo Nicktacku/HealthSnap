@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import "../css/App.css";
-import GIFSignup from "../assets/E4.gif";
+import GIFSignup from "../assets/S3.gif";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ const RegisterPage = () => {
         </div>
       )}
       <form onSubmit={Register}>
-      <img src={GIFSignup} alt="GIF for Signup Page"/>
+      
       <h2>Sign-Up</h2>
         <input
           type="text"
@@ -85,7 +85,8 @@ const RegisterPage = () => {
         />
         <br></br>
         <br></br>
-        <input type="Submit" class="boxsubmitbtn" />
+        <input type="Submit" class="boxsubmitbtn" 
+        style= {{width: '150px', height: '50px', margin: '10px 5px 10px 170px', border: '2px solid #000'}}/>
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState,useContext } from "react";
+import AuthContext from "../context/AuthContext";
+import { Link, NavLink } from "react-router-dom";
 import "../css/App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -18,6 +19,7 @@ import {
 
 const HomePage = () => {
   let [feedbacks, setFeedbacks] = useState([]);
+  let { user } = useContext(AuthContext);
 
   let getFeedbacks = async () => {
     let response = await fetch("http://127.0.0.1:8000/feedbacks/");
@@ -130,10 +132,10 @@ const HomePage = () => {
               ensuring its continued relevance and effectiveness in promoting a
               healthier and happier community.
             </p>
-            <a href="#book" class="btn">
-              {" "}
+            {!user ? <NavLink to="/Login" className="btn"> {" "}
               Get Started <FontAwesomeIcon icon={faChevronRight} />
-            </a>
+            </NavLink>: null}
+              
           </div>
         </div>
       </section>

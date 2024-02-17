@@ -1,17 +1,26 @@
 import React, { useState, useEffect } from "react";
 import "../css/feedback.css";
 import { jwtDecode } from "jwt-decode";
+import robot from "../assets/S3.gif"
 
 const Records = () => {
   let [records, setRecords] = useState([]);
   let [refresh, setRefresh] = useState(false);
 
   let getRecords = async () => {
-    let response = await fetch("http://127.0.0.1:8000/records/");
+    let response = await fetch("http://127.0.0.1:8000/records/", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        user_id: user.user_id,
+        
+      }),
+    });
 
     let data = await response.json();
 
-    console.log("this is my name", data[0].patient_name);
     setRecords(data);
   };
 
@@ -50,26 +59,26 @@ const Records = () => {
   return (
     <>
       <div class="image-section">
-        <img src="ER3.gif" alt="HealthSnap Image" />
+        <img src={robot} alt="HealthSnap Image" style= {{width:"450px", marginLeft:"580px"}} />
       </div>
       <form id="recordForm" class="record-form" onSubmit={giveRecord}>
         <h2 class="heading">
           ADD NEW RECORD <span>+</span>
         </h2>
-        <label for="patientName">Record Name:</label>
-        <input type="text" id="patientName" name="patientName" required />
+        <label for="patientName" style={{ fontSize: '20px', marginLeft: '550px'}}>Record Name:</label>
+        <input type="text" id="patientName" name="patientName" required style={{ width: "500px", fontSize: "10px", padding: "10px", border: '2px solid black',margin: '10px 5px 10px 550px'}}/>
         <br /> <br />
-        <label for="notes">Notes:</label>
+        <label for="notes" style={{ fontSize: '20px', marginLeft: '550px'}}>Notes:</label>
         <textarea
           id="notes"
           name="notes"
           rows="1"
           required
-          style={({ height: "16" }, { width: "24" })}
+          style={{ width: "500px", fontSize: "10px", padding: "10px", border: '2px solid black',margin: '10px 5px 10px 550px'}}
         ></textarea>
         <br />
         <br />
-        <button type="submit" class="btn">
+        <button type="submit" class="btn1 "  >
           Add Record{" "}
         </button>
       </form>
@@ -78,18 +87,22 @@ const Records = () => {
       <br />
       <br />
       <h2 class="heading">Past Records</h2>
-      {records.map((record) => {
+      {
+      records.length !== 0 ? records.map((record) => {
+        console.log("length", records.length)
         return (
-          <div class="box" style={{ height: "500px" }}>
-            <h3>{record.patient_name}</h3>
+          <div class="card" style={{ width: "500px", fontSize: "10px", padding: "10px", border: '2px solid black',margin: '10px 5px 10px 550px'}}>
+          <div class="card-body" style={{ height: "500px" }}>
+            <h3 class="card-title">{record.patient_name}</h3>
 
-            <p class="text truncate-height">
+            <p class="card-text truncate-height">
               <br></br>
               {record.patient_notes}
             </p>
           </div>
+          </div>
         );
-      })}
+      }): <p>no records to show</p>}
 
       <br />
     </>

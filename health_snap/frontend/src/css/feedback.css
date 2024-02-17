@@ -65,6 +65,22 @@ section:nth-child(even) {
     font-size: 1.7rem;
     background: linear-gradient(90deg, #F5B7B1, #D8BFD8); 
 }
+
+.btn1 {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-left: 720px;
+    padding: 1rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--green);
+    cursor: pointer;
+    font-size: 2.5rem;
+    background: #fff;
+  }
+
 .btn span {
     padding: 0.7rem 1rem;
     border-radius:  .5rem;
@@ -100,6 +116,7 @@ section:nth-child(even) {
 .btn {
   display: inline-block;
   margin-top: 0.5rem;
+  margin-left: 2px;
   padding: 1rem;
   padding-left: 1rem;
   border: var(--border);

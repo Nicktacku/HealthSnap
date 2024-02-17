@@ -66,10 +66,12 @@ def getUsers(request):
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
 
-@api_view(["GET"])
+@api_view(["POST"])
 def getRecords(request):
-    records = Record.objects.all()
+    user_id = request.data["user_id"]
+    records = Record.objects.filter(user_id=user_id)
     serializer = RecordSerializer(records, many=True)
+    print(serializer.data)
     return Response(serializer.data)
 
 @api_view(["POST"])

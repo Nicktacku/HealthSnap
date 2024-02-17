@@ -497,7 +497,8 @@ section:nth-child(even) {
 
 .boxsubmitbtn{
     padding: 5px;
-    font-size: 10px;
+    font-size: 20px;
+
 }
 
 /* media queries */
@@ -544,3 +545,7 @@ section:nth-child(even) {
     }
 }
 
+.login {
+    margin: auto;
+    outline: 100px;
+}
