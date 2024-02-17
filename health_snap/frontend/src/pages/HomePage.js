@@ -23,10 +23,7 @@ const HomePage = () => {
 
   let getFeedbacks = async () => {
     let response = await fetch("http://127.0.0.1:8000/feedbacks/");
-
     let data = await response.json();
-
-    console.log("this is my name", data[0].stars);
 
     setFeedbacks(data);
   };
@@ -53,13 +50,11 @@ const HomePage = () => {
             the way for personalized health solutions.
           </p>
           <a href="#icons" class="btn">
-            {" "}
+            
             CONTINUE <FontAwesomeIcon icon={faChevronRight} />
           </a>
         </div>
       </section>
-      {/*!--home section ends*/}
-      {/*!--icons section starts*/}
       <section
         className="icons-container"
         id="icons"
@@ -106,11 +101,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/*!--about section starts*/}
       <section class="aboutus" id="aboutus">
         <h3 class="heading">
-          {" "}
-          <span>about</span> us{" "}
+          <span>about</span> us
         </h3>
 
         <div class="row">
@@ -132,23 +125,20 @@ const HomePage = () => {
               ensuring its continued relevance and effectiveness in promoting a
               healthier and happier community.
             </p>
-            {!user ? <NavLink to="/Login" className="btn"> {" "}
+            {!user ? <NavLink to="/Login" className="btn"> 
               Get Started <FontAwesomeIcon icon={faChevronRight} />
             </NavLink>: null}
               
           </div>
         </div>
       </section>
-      {/*!--about section ends--*/}
 
-      {/*!--services section starts--*/}
       <section
         class="services"
         id="services"
         style={{ backgroundColor: "#FFFFFF" }}
       >
         <h1 class="heading">
-          {" "}
           our <span>services</span>
         </h1>
 
@@ -161,8 +151,8 @@ const HomePage = () => {
               health.
             </p>
             <Link to="/Consultation" class="btn">
-              {" "}
-              Go to Consult <FontAwesomeIcon icon={faChevronRight} />{" "}
+              
+              Go to Consult <FontAwesomeIcon icon={faChevronRight} />
             </Link>
           </div>
 
@@ -171,8 +161,8 @@ const HomePage = () => {
             <h3>Records</h3>
             <p>You can access your medical records here that you provided.</p>
             <Link to="/Record" class="btn">
-              {" "}
-              Go to Records <FontAwesomeIcon icon={faChevronRight} />{" "}
+              
+              Go to Records <FontAwesomeIcon icon={faChevronRight} />
             </Link>
           </div>
         </div>
@@ -183,8 +173,8 @@ const HomePage = () => {
 
       <section class="doctors" id="doctors">
         <h1 class="heading">
-          {" "}
-          HEALTH SNAP <span> DEVELOPERS </span>{" "}
+          
+          HEALTH SNAP <span> DEVELOPERS </span>
         </h1>
 
         <div class="box-container">
@@ -264,17 +254,13 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/*!-- doctors section ends --*/}
-
-      {/*!--review section starts--*/}
-
       <section
         class="review"
         id="review"
         style={{ backgroundColor: "#FFFFFF" }}
       >
         <h1 class="heading">
-          {" "}
+          
           CLIENT'S <span>FEEDBACK</span> <br></br>
           <Link to="/Feedback" class="btn">
             ADD FEEDBACK <FontAwesomeIcon icon={faPlus} />
@@ -328,33 +314,30 @@ const HomePage = () => {
           <br />
           <br />
         </div>
-      </section>
-      {/*!--review section ends--*/}
-
-      {/*!--footer section starts--*/}
+      </section> 
 
       <section class="footer">
         <div class="box-container">
           <div class="box">
             <h3>WebPage Link</h3>
             <a href="#home">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> Home
             </a>
             <a href="#aboutus">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> About Us
             </a>
             <a href="#services">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> Services
             </a>
             <a href="#doctors">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> Developers
             </a>
             <a href="#review">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> Feedback
             </a>
           </div>
@@ -362,7 +345,7 @@ const HomePage = () => {
           <div class="box">
             <h3>Our Services</h3>
             <a href="#services">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> Consult
               <br></br>
               <br></br>
@@ -373,19 +356,19 @@ const HomePage = () => {
           <div class="box">
             <h3>Contact Us</h3>
             <a href="#">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> +639-206-89123
             </a>
             <a href="#">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> (7) 621-7098
             </a>
             <a href="#">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> healthsnap@gmail.com
             </a>
             <a href="#">
-              {" "}
+              
               <FontAwesomeIcon icon={faChevronRight} /> Philippines
             </a>
           </div>
@@ -396,22 +379,22 @@ const HomePage = () => {
               href="https://www.facebook.com/profile.php?id=61556129057135"
               target="_blank"
             >
-              {" "}
+              
               <FontAwesomeIcon icon={faFacebookF} /> Facebook
             </a>
             <a href="https://twitter.com/Taaaalooon" target="_blank">
-              {" "}
+              
               <FontAwesomeIcon icon={faTwitter} /> Twitter
             </a>
             <a href="https://www.instagram.com/healtsnap" target="_blank">
-              {" "}
+              
               <FontAwesomeIcon icon={faInstagram} /> Instagram
             </a>
           </div>
         </div>
 
         <div class="credit">
-          {" "}
+          
           Produced by <span>HealthSnap TEAM</span> | @2024 All Rights Reserved
         </div>
       </section>

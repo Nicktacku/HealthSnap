@@ -71,20 +71,15 @@ def getRecords(request):
     user_id = request.data["user_id"]
     records = Record.objects.filter(user_id=user_id)
     serializer = RecordSerializer(records, many=True)
-    print(serializer.data)
     return Response(serializer.data)
 
 @api_view(["POST"])
 def giveRecord(request):
-    print(request.data)
-
     serializer = RecordSerializer(data=request.data)
 
     if serializer.is_valid():
         serializer.save()
-        print("saved")
         return Response(serializer.data)
-    print("didnot save", serializer.data)
     return Response(serializer.data)
 
 @api_view(["GET"])
@@ -100,9 +95,7 @@ def giveFeedback(request):
 
     if serializer.is_valid():
         serializer.save()
-        print("saved")
         return Response(serializer.data)
-    print("didnot save", serializer.data)
     return Response(serializer.data)
 
 @api_view(["POST"])

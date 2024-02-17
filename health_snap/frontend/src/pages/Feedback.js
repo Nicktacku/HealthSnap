@@ -10,12 +10,10 @@ const Feedback = () => {
   const navigate = useNavigate();
 
   const clickedStar = (e) => {
-    console.log(e.target.alt);
     setRate(e.target.alt);
     setClicked(true);
   };
   const setStar = (e) => {
-    console.log(e.target.alt);
     setRate(e.target.alt);
     setClicked(false);
   };
@@ -23,14 +21,6 @@ const Feedback = () => {
     if (!clicked) {
       setRate(0);
     }
-  };
-
-  let getFeedbacks = async () => {
-    let response = await fetch("http://127.0.0.1:8000/feedbacks/");
-
-    let data = await response.json();
-
-    console.log("this is my name", data[0].patient_name);
   };
 
   let [user, setUser] = useState(() =>

@@ -8,7 +8,6 @@ import GIFLogin from "../assets/S3.gif";
 const LoginPage = () => {
   let { LoginUser, user } = useContext(AuthContext);
   useEffect(() => {
-    console.log("gumana");
   }, [LoginUser]);
 
   return (

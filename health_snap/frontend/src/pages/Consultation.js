@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../css/Consultation.css"; //Import CSS file in Consultation
+import "../css/Consultation.css";
 
 function Consultation() {
-  // var symptoms = [];
   const [symptoms, setSymptoms] = useState([]);
   const [page1, setPage1] = useState("Block");
   const [page2, setPage2] = useState("None");
@@ -32,11 +31,9 @@ function Consultation() {
     var symptom = e.target.value;
     if (e.target.checked) {
       const updatedSymptoms = symptoms.filter((s) => s !== symptom);
-      console.log(symptom);
-      setSymptoms([...symptoms, symptom]);
-      console.log(symptoms);
+       setSymptoms([...symptoms, symptom]);
     } else {
-      const updatedSymptoms = symptoms.filter((s) => s !== symptom); // Remove symptom from the array
+      const updatedSymptoms = symptoms.filter((s) => s !== symptom);
       setSymptoms(updatedSymptoms);
     }
   };
@@ -63,7 +60,6 @@ function Consultation() {
         <button onClick={toPage2}>Proceed</button>
       </div>
 
-      {/* Start of page 2 */}
       <div className="container" id="page2" style={{ display: `${page2}` }}>
         <h1 className="acustom-font1">Health Consultation - Page 2</h1>
         <div id="symptomsSection">

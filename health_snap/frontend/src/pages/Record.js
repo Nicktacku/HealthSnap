@@ -50,8 +50,6 @@ const Records = () => {
     setRefresh(true);
   };
 
-  console.log("user: ", user.user_id);
-
   useEffect(() => {
     getRecords();
   }, [refresh]);
@@ -79,7 +77,7 @@ const Records = () => {
         <br />
         <br />
         <button type="submit" class="btn1 "  >
-          Add Record{" "}
+          Add Record
         </button>
       </form>
       <br />
@@ -89,7 +87,6 @@ const Records = () => {
       <h2 class="heading">Past Records</h2>
       {
       records.length !== 0 ? records.map((record) => {
-        console.log("length", records.length)
         return (
           <div class="card" style={{ width: "500px", fontSize: "10px", padding: "10px", border: '2px solid black',margin: '10px 5px 10px 550px'}}>
           <div class="card-body" style={{ height: "500px" }}>
@@ -102,7 +99,7 @@ const Records = () => {
           </div>
           </div>
         );
-      }): <p>no records to show</p>}
+      }): null}
 
       <br />
     </>

@@ -24,7 +24,6 @@ const RegisterPage = () => {
         password: e.target.password.value,
       }),
     });
-    console.log(response.status);
     if (response.status === 400) {
       setError(true);
     } else if (response.status === 201) {

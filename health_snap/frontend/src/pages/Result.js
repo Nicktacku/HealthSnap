@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Consultation.css"; //Import CSS file in Consultation
+import "./Consultation.css"; 
 
 function HealthResult () {
     return (
