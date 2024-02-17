@@ -48,8 +48,9 @@ const RegisterPage = () => {
           name="username"
           id="username"
           placeholder="Enter Username"
-          class ="boxEnterUsername"
+          style={{ width: "500px", fontSize: "20px", padding: "10px", border: '2px solid black'}}
         />
+        <br></br>
         <input 
           type="email" 
           name="email" 
@@ -57,29 +58,34 @@ const RegisterPage = () => {
           placeholder="Enter Email" 
           class ="boxEnterUsername"
           />
-        
+        <br></br>
+        <br></br>
         <input
           type="text"
           name="first name"
           id="first_name"
           placeholder="Enter First Name"
-          class ="boxEnterUsername"
+          style={{ width: "500px", fontSize: "20px", padding: "10px", border: '2px solid black'}}
         />
+        <br></br>
         <input
           type="text"
           name="last name"
           id="last_name"
           placeholder="Enter Last Name"
-          class ="boxEnterUsername"
+          style={{ width: "500px", fontSize: "20px", padding: "10px", border: '2px solid black'}}
         />
+        <br></br>
         <input
           type="password"
           name="password"
           id="password"
           placeholder="Enter Password"
-          class ="boxEnterUsername"
+          class ="boxEnterPassword"
         />
-        <input type="submit" />
+        <br></br>
+        <br></br>
+        <input type="Submit" class="boxsubmitbtn" />
       </form>
     </div>
   );

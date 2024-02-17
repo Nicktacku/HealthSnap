@@ -17,10 +17,11 @@ const LoginPage = () => {
         <form onSubmit={LoginUser}>
           <img src={GIFLogin} alt="GIF for Login Page"/>
           <h2>Log-In</h2>
-          <input type="text" name="username" placeholder="Enter Username" class ="boxEnterUsername" />
+          <input type="text" name="username" placeholder="Enter Username" style={{ width: "500px", fontSize: "20px", padding: "10px", border: '2px solid black'}}/>
+          <br></br>
           <input type="password" name="password" placeholder="Enter Password" class ="boxEnterPassword" />
           <br></br>
-          <input type="submit"/>
+          <input type="Submit" class="boxsubmitbtn"/>
         </form>
       )}
       <br></br>
