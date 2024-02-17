@@ -500,9 +500,6 @@ section:nth-child(even) {
     font-size: 10px;
 }
 
-
-
-
 /* media queries */
 @media (max-width:  991px) {
     html {

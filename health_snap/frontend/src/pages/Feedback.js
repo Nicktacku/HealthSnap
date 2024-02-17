@@ -65,7 +65,7 @@ const Feedback = () => {
             <img src={require("../assets/SF1.gif")} alt="" />
           </div>
         </div>
-        <p>Rate your experience:</p>
+        <p>Rate Your Experience:</p>
         {rating.map((star) => {
           if (star <= rate) {
             return (
@@ -94,10 +94,9 @@ const Feedback = () => {
         <br />
         <br />
         <label for="feedback">Additional Feedback:</label>
-        <textarea id="feedback" name="feedback" rows="4"></textarea>
+        <textarea id="feedback" name="feedback" rows="6"></textarea>
         <br />
         <br />
-
         <button type="submit" class="btn">
           Submit
         </button>
